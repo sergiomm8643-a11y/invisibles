@@ -32,7 +32,13 @@ export default function App() {
 
   const selectedColorData = product.colors.find((color) => color.name === selectedColor) || product.colors[0];
   const selectedImage = selectedColorData.images[selectedImageIndex] || selectedColorData.images[0];
-  const checkoutUrl = "#pasarela-pago-pendiente";
+  const checkoutLinks = {
+  Negro: "https://vqzkc0-xx.myshopify.com/cart/57562408354175:1",
+  Blanco: "https://vqzkc0-xx.myshopify.com/cart/57562408485247:1",
+  Aloe: "https://vqzkc0-xx.myshopify.com/cart/57577044312447:1",
+};
+
+const checkoutUrl = checkoutLinks[selectedColor];
 
   return (
     <main className="site">
