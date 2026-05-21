@@ -126,12 +126,13 @@ const checkoutUrl = checkoutLinks[selectedColor];
             <p className="selection">Color: {selectedColor} · Talla: {selectedSize}</p>
 
             <div className="features">
-              <p>✔ Camiseta premium Stanley/Stella Creator 2.0</p>
-              <p>✔ Algodón orgánico de alta calidad</p>
-              <p>✔ Corte unisex premium</p>
-              <p>✔ Envío 24/72h</p>
-              <p>✔ Compra segura con tarjeta, Apple Pay, Google Pay o PayPal</p>
-            </div>
+  <p>✔ Camiseta premium Stanley/Stella Creator 2.0</p>
+  <p>✔ Algodón orgánico de alta calidad</p>
+  <p>✔ Corte unisex premium</p>
+  <p>✔ Envío en 3/5 días hábiles</p>
+  <p>✔ Envío gratis desde 60€</p>
+  <p>✔ Compra segura con tarjeta, Apple Pay, Google Pay o PayPal</p>
+</div>
           </div>
         </div>
       </section>
