@@ -6,24 +6,20 @@ const product = {
   price: "39,99€",
   sizes: ["S", "M", "L", "XL", "XXL"],
   colors: [
-    { name: "Negro", images: [
-      "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?q=80&w=1200&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1503341504253-dff4815485f1?q=80&w=1200&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1523398002811-999ca8dec234?q=80&w=1200&auto=format&fit=crop"
-    ]},
-    { name: "Blanco", images: [
-      "https://images.unsplash.com/photo-1581655353564-df123a1eb820?q=80&w=1200&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?q=80&w=1200&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1483985988355-763728e1935b?q=80&w=1200&auto=format&fit=crop"
-    ]},
-    { name: "Aloe", images: [
-      "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?q=80&w=1200&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?q=80&w=1200&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1496747611176-843222e1e57c?q=80&w=1200&auto=format&fit=crop"
-    ]}
-  ]
+    {
+      name: "Negro",
+      images: ["/black-front.png", "/black-back.png", "/black-model.png"],
+    },
+    {
+      name: "Blanco",
+      images: ["/white-front.png", "/white-back.png", "/white-model.png"],
+    },
+    {
+      name: "Aloe",
+      images: ["/aloe-front.png", "/aloe-back.png", "/aloe-model.png"],
+    },
+  ],
 };
-
 export default function App() {
   const [selectedColor, setSelectedColor] = useState("Negro");
   const [selectedSize, setSelectedSize] = useState("M");
