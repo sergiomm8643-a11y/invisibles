@@ -8,7 +8,7 @@ const product = {
   colors: [
     {
       name: "Negro",
-      images: ["/black-front-v2.png", "/black-back-v2.png", "/black-model.png"],
+      images: ["/black-front.png.png", "/black-back.png.png", "/black-model.png"],
     },
     {
       name: "Blanco",
@@ -16,7 +16,7 @@ const product = {
     },
     {
       name: "Aloe",
-      images: ["/aloe-front.png", "/aloe-back.png", "/aloe-model-v2.png"],
+      images: ["/aloe-front.png", "/aloe-back.png", "/aloe-model.png.png"],
     },
   ],
 };
