@@ -39,29 +39,28 @@ const checkoutUrl = checkoutLinks[selectedColor];
   return (
     <main className="site">
       <section className="hero">
-        <div className="hero-bg" />
-        <div className="invisible-mark" aria-hidden="true">
-          <svg viewBox="0 0 1600 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M800 210C745 220 700 245 670 285L590 520L710 675" stroke="white" strokeWidth="34" strokeLinecap="round" strokeLinejoin="round" />
-            <path d="M800 210C855 220 900 245 930 285L1010 520L890 675" stroke="white" strokeWidth="34" strokeLinecap="round" strokeLinejoin="round" />
-            <path d="M590 520L705 390C760 330 840 330 895 390L1010 520" stroke="white" strokeWidth="34" strokeLinecap="round" strokeLinejoin="round" />
-            <path d="M710 675L560 760V870" stroke="white" strokeWidth="34" strokeLinecap="square" strokeLinejoin="round" />
-            <path d="M890 675L1040 760V870" stroke="white" strokeWidth="34" strokeLinecap="square" strokeLinejoin="round" />
-          </svg>
-        </div>
-        <div className="hero-overlay" />
+  <img
+    src="/hero-banner.png"
+    alt="LOS INVISIBLES — Camiseta Albañiles"
+    className="hero-banner"
+  />
 
-        <div className="hero-content">
-          <p className="eyebrow">Movimiento Oficial</p>
-          <h1>LOS INVISIBLES</h1>
-          <p className="hero-claim">NO QUEREMOS APLAUSOS.<br /><span>EXIGIMOS RESPETO.</span></p>
-          <div className="hero-actions">
-            <a href="#comprar" className="btn btn-primary">COMPRAR AHORA</a>
-            <a href="#historia" className="btn btn-secondary">NUESTRA HISTORIA</a>
-          </div>
-        </div>
-      </section>
+  <div className="hero-overlay" />
 
+  <div className="hero-content">
+    <p className="eyebrow">Movimiento Oficial</p>
+    <h1>LOS INVISIBLES</h1>
+    <p className="hero-claim">
+      NO QUEREMOS APLAUSOS.<br />
+      <span>EXIGIMOS RESPETO.</span>
+    </p>
+
+    <div className="hero-actions">
+      <a href="#comprar" className="btn btn-primary">COMPRAR AHORA</a>
+      <a href="#historia" className="btn btn-secondary">NUESTRA HISTORIA</a>
+    </div>
+  </div>
+</section>
       <section className="message">
         <h2>TODOS SOMOS INVISIBLES PARA ALGUIEN.</h2>
         <p>Pero sin nosotros, nada funciona.</p>
