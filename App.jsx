@@ -125,7 +125,7 @@ const checkoutUrl = checkoutLinks[selectedColor];
   <p>✔ Algodón orgánico de alta calidad</p>
   <p>✔ Corte unisex premium</p>
   <p>✔ Envío en 3/5 días hábiles</p>
-  <p>✔ Envío gratis desde 60€</p>
+  <p>✔ Envíos nacionales · Gratis desde 60€</p>
   <p>✔ Compra segura con tarjeta, Apple Pay, Google Pay o PayPal</p>
 </div>
           </div>
