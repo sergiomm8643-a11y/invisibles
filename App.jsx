@@ -40,7 +40,7 @@ const checkoutUrl = checkoutLinks[selectedColor];
     <main className="site">
       <section className="hero">
   <img
-    src="/hero-banner.png"
+    src="/hero-banner.png.png"
     alt="LOS INVISIBLES — Camiseta Albañiles"
     className="hero-banner"
   />
