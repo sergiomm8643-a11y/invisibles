@@ -97,9 +97,14 @@ const checkoutUrl = checkoutLinks[selectedColor];
             <h2>{product.title}</h2>
             <p className="subtitle">{product.subtitle}</p>
             <div className="price-block">
-  <span className="old-price">60€</span>
-  <span className="price">{product.price}</span>
-  <span className="drop-offer">Oferta hasta próximo drop</span>
+  <div className="price-row">
+    <span className="old-price">60€</span>
+    <span className="price">39,99€</span>
+  </div>
+
+  <div className="offer-badge">
+    Oferta hasta próximo drop
+  </div>
 </div>
 
             <div className="selector">
