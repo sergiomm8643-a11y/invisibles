@@ -113,4 +113,12 @@
   font-size: 20px;
   margin-bottom: 32px;
 }
- 
+.movement-counter {
+  margin-top: 18px;
+  color: #a1a1aa;
+  font-size: 14px;
+  text-align: center;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+} 
