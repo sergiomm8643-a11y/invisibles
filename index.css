@@ -55,5 +55,29 @@
 
 .btn-secondary {
   border: 1px solid white;
+ .price-block {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-bottom: 34px;
+}
+
+.old-price {
+  font-size: 28px;
+  color: #71717a;
+  text-decoration: line-through;
+  font-weight: 800;
+}
+
+.drop-offer {
+  background: #dc2626;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 900;
+  text-transform: uppercase;
+} 
   color: white;
 }
