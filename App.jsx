@@ -96,7 +96,11 @@ const checkoutUrl = checkoutLinks[selectedColor];
             <p className="eyebrow">Primera colección oficial</p>
             <h2>{product.title}</h2>
             <p className="subtitle">{product.subtitle}</p>
-            <p className="price">{product.price}</p>
+            <div className="price-block">
+  <span className="old-price">60€</span>
+  <span className="price">{product.price}</span>
+  <span className="drop-offer">Oferta hasta próximo drop</span>
+</div>
 
             <div className="selector">
               <p>Color seleccionado</p>
