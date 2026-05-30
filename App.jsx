@@ -25,6 +25,71 @@ export default function App() {
   const [selectedSize, setSelectedSize] = useState("M");
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
   const [cookiesAccepted, setCookiesAccepted] = useState(false);
+  const [cart, setCart] = useState([]);
+
+const variantIds = {
+  Negro: {
+    S: "57562408321407",
+    M: "57562408354175",
+    L: "57562408386943",
+    XL: "57562408419711",
+    XXL: "57646753153407",
+  },
+  Blanco: {
+    S: "57562408452479",
+    M: "57562408485247",
+    L: "57562408518015",
+    XL: "57562408550783",
+    XXL: "57646755643775",
+  },
+  Aloe: {
+    S: "57577044279679",
+    M: "57577044312447",
+    L: "57577044345215",
+    XL: "57577044377983",
+    XXL: "57646756069759",
+  },
+};
+
+const addToCart = () => {
+  const variantId = variantIds[selectedColor][selectedSize];
+
+  const existingItem = cart.find(
+    (item) => item.color === selectedColor && item.size === selectedSize
+  );
+
+  if (existingItem) {
+    setCart(
+      cart.map((item) =>
+        item.color === selectedColor && item.size === selectedSize
+          ? { ...item, quantity: item.quantity + 1 }
+          : item
+      )
+    );
+  } else {
+    setCart([
+      ...cart,
+      {
+        color: selectedColor,
+        size: selectedSize,
+        variantId,
+        quantity: 1,
+      },
+    ]);
+  }
+};
+
+const removeFromCart = (variantId) => {
+  setCart(cart.filter((item) => item.variantId !== variantId));
+};
+
+const checkoutCart = () => {
+  const cartUrl = cart
+    .map((item) => `${item.variantId}:${item.quantity}`)
+    .join(",");
+
+  window.location.href = `https://vqzkc0-xx.myshopify.com/cart/${cartUrl}`;
+};
 
   const selectedColorData = product.colors.find((color) => color.name === selectedColor) || product.colors[0];
   const selectedImage = selectedColorData.images[selectedImageIndex] || selectedColorData.images[0];
@@ -125,7 +190,30 @@ const checkoutUrl = checkoutLinks[selectedColor];
               </div>
             </div>
 
-            <a href={checkoutUrl} className="btn btn-buy">COMPRAR CAMISETA</a>
+            <button onClick={addToCart} className="btn btn-buy">
+  AÑADIR AL CARRITO
+</button>
+           {cart.length > 0 && (
+  <div className="cart-box">
+    <h3>Tu cesta</h3>
+
+    {cart.map((item) => (
+      <div key={item.variantId} className="cart-item">
+        <span>
+          Camiseta {item.color} / {item.size} x {item.quantity}
+        </span>
+
+        <button onClick={() => removeFromCart(item.variantId)}>
+          Eliminar
+        </button>
+      </div>
+    ))}
+
+    <button onClick={checkoutCart} className="btn btn-buy cart-checkout">
+      FINALIZAR COMPRA
+    </button>
+  </div>
+)} 
           <p className="selection">Color: {selectedColor} · Talla: {selectedSize}</p>
             <p className="movement-counter">
   EL MOVIMIENTO YA HA COMENZADO.
