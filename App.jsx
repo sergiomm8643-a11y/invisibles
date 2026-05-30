@@ -151,6 +151,16 @@ const checkoutUrl = checkoutLinks[selectedColor];
         <article><h3>Privacidad y cookies</h3><p>Usamos cookies técnicas y analíticas para mejorar la experiencia de compra. El usuario podrá aceptar, rechazar o configurar las cookies.</p></article>
         <article><h3>Envíos y devoluciones</h3><p>Envíos a España. Cambios y devoluciones según condiciones de compra publicadas. Añadir plazos reales antes de vender.</p></article>
       </section>
+      <section id="contacto" className="contact-section">
+  <p className="eyebrow">Contacto</p>
+  <h2>¿NECESITAS AYUDA?</h2>
+  <p>
+    Escríbenos para cualquier duda sobre pedidos, tallas, envíos o devoluciones.
+  </p>
+  <a href="mailto:losinvisiblesbrand@gmail.com" className="btn btn-primary">
+    losinvisiblesbrand@gmail.com
+  </a>
+</section>
 
       <footer className="footer">
         <div><h3>LOS INVISIBLES</h3><p>NO QUEREMOS APLAUSOS. EXIGIMOS RESPETO.</p></div>
