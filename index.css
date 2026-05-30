@@ -114,11 +114,12 @@
   margin-bottom: 32px;
 }
 .movement-counter {
-  margin-top: 18px;
-  color: #a1a1aa;
-  font-size: 14px;
+  margin: 24px auto 28px;
   text-align: center;
-  font-weight: 800;
-  letter-spacing: 0.15em;
+  font-size: 17px;
+  font-weight: 950;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
-} 
+  color: #ef4444;
+  width: 100%;
+}
