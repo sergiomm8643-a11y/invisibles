@@ -126,6 +126,9 @@ const checkoutUrl = checkoutLinks[selectedColor];
             </div>
 
             <a href={checkoutUrl} className="btn btn-buy">COMPRAR CAMISETA</a>
+            <p className="movement-counter">
+  EL MOVIMIENTO YA HA COMENZADO.
+</p>
             <p className="selection">Color: {selectedColor} · Talla: {selectedSize}</p>
 
             <div className="features">
