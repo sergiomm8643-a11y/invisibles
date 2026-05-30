@@ -79,5 +79,24 @@
   font-weight: 900;
   text-transform: uppercase;
 } 
+  .contact-section {
+  padding: 100px 24px;
+  text-align: center;
+  background: #000;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.contact-section h2 {
+  font-size: clamp(42px, 7vw, 82px);
+  margin: 0 0 24px;
+  font-weight: 950;
+}
+
+.contact-section p {
+  color: #d4d4d8;
+  font-size: 20px;
+  margin-bottom: 32px;
+}
   color: white;
 }
