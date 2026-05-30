@@ -123,3 +123,36 @@
   color: #ef4444;
   width: 100%;
 }
+.cart-box {
+  margin-top: 28px;
+  padding: 22px;
+  border: 1px solid #27272a;
+  border-radius: 22px;
+  background: #000;
+}
+
+.cart-box h3 {
+  margin: 0 0 16px;
+  font-size: 22px;
+  font-weight: 950;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 12px 0;
+  border-bottom: 1px solid #27272a;
+  color: #d4d4d8;
+}
+
+.cart-item button {
+  background: none;
+  border: 0;
+  color: #ef4444;
+  font-weight: 800;
+}
+
+.cart-checkout {
+  margin-top: 20px;
+}
