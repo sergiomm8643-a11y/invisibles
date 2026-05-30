@@ -55,12 +55,18 @@
 
 .btn-secondary {
   border: 1px solid white;
- .price-block {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  flex-wrap: wrap;
+  color: white;
+}
+
+.price-block {
   margin-bottom: 34px;
+}
+
+.price-row {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  margin-bottom: 14px;
 }
 
 .old-price {
@@ -70,15 +76,24 @@
   font-weight: 800;
 }
 
-.drop-offer {
+.price {
+  font-size: 48px;
+  color: #ffffff;
+  font-weight: 950;
+  line-height: 1;
+}
+
+.offer-badge {
+  display: inline-block;
   background: #dc2626;
   color: white;
-  padding: 8px 14px;
+  padding: 9px 16px;
   border-radius: 999px;
   font-size: 13px;
   font-weight: 900;
   text-transform: uppercase;
-} 
+  letter-spacing: .06em;
+}
   .contact-section {
   padding: 100px 24px;
   text-align: center;
