@@ -258,10 +258,39 @@ const checkoutUrl = checkoutLinks[selectedColor];
   </a>
 </section>
 
-      <footer className="footer">
-        <div><h3>LOS INVISIBLES</h3><p>NO QUEREMOS APLAUSOS. EXIGIMOS RESPETO.</p></div>
-        <nav><a href="#">Instagram</a><a href="#">TikTok</a><a href="#">Contacto</a><a href="#legal">Aviso legal</a><a href="#legal">Privacidad</a><a href="#legal">Cookies</a><a href="#legal">Envíos</a></nav>
-      </footer>
+     <footer className="footer">
+  <div>
+    <h3>LOS INVISIBLES</h3>
+    <p>NO QUEREMOS APLAUSOS. EXIGIMOS RESPETO.</p>
+  </div>
+
+  <nav>
+    <a
+  href="https://instagram.com/losinvisiblesbrand"
+  target="_blank"
+  rel="noreferrer"
+>
+  Instagram
+</a>
+
+<a
+  href="https://tiktok.com/@losinvisiblesbrand"
+  target="_blank"
+  rel="noreferrer"
+>
+  TikTok
+</a>
+
+    <a href="#contacto">
+      Contacto
+    </a>
+
+    <a href="#legal">Aviso legal</a>
+    <a href="#legal">Privacidad</a>
+    <a href="#legal">Cookies</a>
+    <a href="#legal">Envíos</a>
+  </nav>
+</footer>
 
       {!cookiesAccepted && (
         <div className="cookies">
