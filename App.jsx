@@ -14,24 +14,40 @@ const collections = [
         eyebrow: "Colección Marca Invisible",
         sizes: ["S", "M", "L", "XL", "2XL"],
         colors: [
-          {
-            name: "Negro",
-            images: [
-  "/camiseta-especial-front.jpg.PNG.2.png",
-  "/camiseta-especial-back.jpg.PNG.2.png",
-  "/camiseta-especial-hanger.jpg.PNG.2.png",
+  {
+    name: "Negro",
+    images: [
+      "/camiseta-especial-front.jpg",
+      "/camiseta-especial-back.jpg",
+      "/camiseta-especial-hanger.jpg",
+    ],
+  },
+  {
+    name: "Blanco",
+    images: [
+      "/camiseta-especial-white-front.jpg",
+      "/camiseta-especial-white-back.jpg",
+      "/camiseta-especial-white-hanger.jpg",
+    ],
+  },
 ],
-          },
-        ],
         variantIds: {
-          Negro: {
-            S: "57788900606335",
-            M: "57788900639103",
-            L: "57788900671871",
-            XL: "57788900704639",
-            "2XL": "57788900737407",
-          },
-        },
+  Blanco: {
+    S: "57788900606335",
+    M: "57788900639103",
+    L: "57788900671871",
+    XL: "57788900704639",
+    "2XL": "57788900737407",
+  },
+
+  Negro: {
+    S: "57813356380543",
+    M: "57813356413311",
+    L: "57813356446079",
+    XL: "57813356478847",
+    "2XL": "57813356511615",
+  },
+},
       },
     ],
   },
