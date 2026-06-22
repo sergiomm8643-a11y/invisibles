@@ -357,7 +357,7 @@ const checkoutUrl = checkoutLinks[selectedColor];
 </button>
           <div className="product-highlights">
   <span>✔ Algodón premium</span>
-  <span>✔ Envío 3–5 días</span>
+  <span>✔ Envío 3–7 días</span>
   <span>✔ Compra segura</span>
 </div>
            {cart.length > 0 && (
