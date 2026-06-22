@@ -315,6 +315,11 @@ const checkoutUrl = checkoutLinks[selectedColor];
             <button onClick={addToCart} className="btn btn-buy">
   AÑADIR AL CARRITO
 </button>
+          <div className="product-highlights">
+  <span>✔ Algodón premium</span>
+  <span>✔ Envío 3–5 días</span>
+  <span>✔ Compra segura</span>
+</div>
            {cart.length > 0 && (
   <div className="cart-box">
     <h3>Tu cesta</h3>
@@ -336,19 +341,7 @@ const checkoutUrl = checkoutLinks[selectedColor];
     </button>
   </div>
 )} 
-          <p className="selection">Color: {selectedColor} · Talla: {selectedSize}</p>
-            <p className="movement-counter">
-  EL MOVIMIENTO YA HA COMENZADO.
-</p>
-
-            <div className="features">
-  <p>✔ Camiseta premium Stanley/Stella Creator 2.0</p>
-  <p>✔ Algodón orgánico de alta calidad</p>
-  <p>✔ Corte unisex premium</p>
-  <p>✔ Envío en 3/5 días hábiles</p>
-  <p>✔ Envíos nacionales · Gratis desde 60€</p>
-  <p>✔ Compra segura con tarjeta, Apple Pay, Google Pay o PayPal</p>
-</div>
+          
           </div>
         </div>
       </section>
