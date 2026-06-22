@@ -17,17 +17,17 @@ const collections = [
   {
     name: "Negro",
     images: [
-      "/camiseta-especial-front.jpg.PNG.2.png",
-      "/camiseta-especial-back.jpg.PNG.2.png",
       "/camiseta-especial-hanger.jpg.PNG.2.png",
+      "/camiseta-especial-back.jpg.PNG.2.png",
+      "/camiseta-especial-front.jpg.PNG.2.png",
     ],
   },
   {
     name: "Blanco",
     images: [
-      "/camiseta-especial-front.jpg.PNG.blanco.png",
-      "/camiseta-especial-back.jpg.PNG.blanco.png",
       "/camiseta-especial-hanger.jpg.PNG.blanco.png",
+      "/camiseta-especial-back.jpg.PNG.blanco.png",
+      "/camiseta-especial-front.jpg.PNG.blanco.png",
     ],
   },
 ],
