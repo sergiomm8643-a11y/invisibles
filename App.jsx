@@ -297,7 +297,7 @@ const checkoutUrl = checkoutLinks[selectedColor];
             <div className="selector">
               <p>Elige tu talla</p>
               <div className="selector-row">
-                {product.sizes.map((size) => (
+                {selectedProduct.sizes.map((size) => (
                   <button key={size} onClick={() => setSelectedSize(size)} className={selectedSize === size ? "size active" : "size"}>{size}</button>
                 ))}
               </div>
