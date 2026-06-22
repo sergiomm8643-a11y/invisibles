@@ -106,12 +106,7 @@ const collections = [
     ],
   },
 ];
-const visibleCollections = visibleCollections.map((collection) => ({
-  ...collection,
-  products: collection.products.filter(
-    (product) => product.gender === selectedGender
-  ),
-}));
+
 const getAllProducts = () => collections.flatMap((collection) => collection.products);
 
 export default function App() {
@@ -136,7 +131,14 @@ export default function App() {
   const [cookiesAccepted, setCookiesAccepted] = useState(false);
 
   const [cart, setCart] = useState([]);
-
+const visibleCollections = collections
+  .map((collection) => ({
+    ...collection,
+    products: collection.products.filter(
+      (product) => product.gender === selectedGender
+    ),
+  }))
+  .filter((collection) => collection.products.length > 0);
   const addToCart = () => {
   const variantId =
   selectedProduct.variantIds[selectedColor][selectedSize];
@@ -239,7 +241,7 @@ const checkoutUrl = checkoutLinks[selectedColor];
 </div>
   <h2>ELIGE TU CAMISETA</h2>
 
-  {collections.map((collection) => (
+  {visibleCollections.map((collection) => (
     <div key={collection.title} className="collection-block">
       <div className="collection-header">
         <h3>{collection.title}</h3>
