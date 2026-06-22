@@ -135,6 +135,7 @@ export default function App() {
     setCart([
       ...cart,
       {
+        title: selectedProduct.title,
         color: selectedColor,
         size: selectedSize,
         variantId,
@@ -311,16 +312,16 @@ const checkoutUrl = checkoutLinks[selectedColor];
     <h3>Tu cesta</h3>
 
     {cart.map((item) => (
-      <div key={item.variantId} className="cart-item">
-        <span>
-          Camiseta {item.color} / {item.size} x {item.quantity}
-        </span>
+  <div key={item.variantId} className="cart-item">
+    <span>
+      {item.title} · {item.color} / {item.size} x {item.quantity}
+    </span>
 
-        <button onClick={() => removeFromCart(item.variantId)}>
-          Eliminar
-        </button>
-      </div>
-    ))}
+    <button onClick={() => removeFromCart(item.variantId)}>
+      Eliminar
+    </button>
+  </div>
+))}
 
     <button onClick={checkoutCart} className="btn btn-buy cart-checkout">
       FINALIZAR COMPRA
