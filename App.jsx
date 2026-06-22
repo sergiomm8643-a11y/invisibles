@@ -213,7 +213,7 @@ const checkoutUrl = checkoutLinks[selectedColor];
     </p>
 
     <div className="hero-actions">
-      <a href="#comprar" className="btn btn-primary">COMPRAR AHORA</a>
+      <a href="#colecciones" className="btn btn-primary">SELECCIONA TU CAMISETA</a>
       <a href="#historia" className="btn btn-secondary">NUESTRA HISTORIA</a>
     </div>
   </div>
@@ -222,7 +222,7 @@ const checkoutUrl = checkoutLinks[selectedColor];
         <h2>TODOS SOMOS INVISIBLES PARA ALGUIEN.</h2>
         <p>Pero sin nosotros, nada funciona.</p>
       </section>
-<section className="collections-section">
+<section id="colecciones" className="collections-section">
   <p className="eyebrow">Colecciones</p>
   <div className="gender-tabs">
   <button
