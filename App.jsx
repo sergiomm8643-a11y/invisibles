@@ -6,8 +6,9 @@ const collections = [
     description: "La esencia de LOS INVISIBLES. Sin sectores. Solo identidad.",
     products: [
       {
-        slug: "camiseta-especial",
-        title: "INVISIBLES – Camiseta Especial",
+  slug: "camiseta-especial",
+  gender: "hombre",
+  title: "INVISIBLES – Camiseta Especial",
         subtitle: "Lo que no se ve, mueve el mundo.",
         price: "39,99€",
         oldPrice: "60€",
@@ -57,6 +58,7 @@ const collections = [
     products: [
       {
         slug: "albaniles",
+        gender: "hombre",
         title: "ALBAÑILES",
         subtitle: "SIN NOSOTROS, TODO SE VIENE ABAJO.",
         price: "39,99€",
@@ -104,14 +106,19 @@ const collections = [
     ],
   },
 ];
-
+const visibleCollections = visibleCollections.map((collection) => ({
+  ...collection,
+  products: collection.products.filter(
+    (product) => product.gender === selectedGender
+  ),
+}));
 const getAllProducts = () => collections.flatMap((collection) => collection.products);
 
 export default function App() {
   const allProducts = getAllProducts();
 
   const [selectedProductSlug, setSelectedProductSlug] = useState("camiseta-especial");
-
+  const [selectedGender, setSelectedGender] = useState("hombre");
   const selectedProduct =
     allProducts.find((item) => item.slug === selectedProductSlug) ||
     allProducts[0];
@@ -215,6 +222,21 @@ const checkoutUrl = checkoutLinks[selectedColor];
       </section>
 <section className="collections-section">
   <p className="eyebrow">Colecciones</p>
+  <div className="gender-tabs">
+  <button
+    className={selectedGender === "hombre" ? "active" : ""}
+    onClick={() => setSelectedGender("hombre")}
+  >
+    HOMBRE
+  </button>
+
+  <button
+    className={selectedGender === "mujer" ? "active" : ""}
+    onClick={() => setSelectedGender("mujer")}
+  >
+    MUJER
+  </button>
+</div>
   <h2>ELIGE TU CAMISETA</h2>
 
   {collections.map((collection) => (
