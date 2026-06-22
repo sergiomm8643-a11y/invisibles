@@ -509,3 +509,29 @@
   font-size: 0.72rem;
   gap: 4px;
 }
+.gender-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  margin-bottom: 28px;
+}
+
+.gender-tabs button {
+  padding: 12px 28px;
+  border: 1px solid #333;
+  background: transparent;
+  color: white;
+  border-radius: 999px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.gender-tabs button:hover {
+  border-color: white;
+}
+
+.gender-tabs button.active {
+  background: white;
+  color: black;
+}
