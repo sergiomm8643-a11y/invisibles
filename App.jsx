@@ -1,56 +1,96 @@
 import { useState } from "react";
 
-const product = {
-  title: "ALBAÑILES",
-  subtitle: "SIN NOSOTROS, TODO SE VIENE ABAJO.",
-  price: "39,99€",
-  sizes: ["S", "M", "L", "XL", "XXL"],
-  colors: [
-    {
-      name: "Negro",
-      images: ["/black-front.png.png", "/black-back.png.png", "/black-model.png"],
-    },
-    {
-      name: "Blanco",
-      images: ["/white-front.png", "/white-back.png", "/white-model.png"],
-    },
-    {
-      name: "Aloe",
-      images: ["/aloe-front.png", "/aloe-back.png", "/aloe-model.png.png"],
-    },
-  ],
-};
-export default function App() {
-  const [selectedColor, setSelectedColor] = useState("Negro");
-  const [selectedSize, setSelectedSize] = useState("M");
-  const [selectedImageIndex, setSelectedImageIndex] = useState(0);
-  const [cookiesAccepted, setCookiesAccepted] = useState(false);
-  const [cart, setCart] = useState([]);
+const collections = [
+  {
+    title: "Colección Marca Invisible",
+    description: "La esencia de LOS INVISIBLES. Sin sectores. Solo identidad.",
+    products: [
+      {
+        slug: "camiseta-especial",
+        title: "INVISIBLES – Camiseta Especial",
+        subtitle: "Lo que no se ve, mueve el mundo.",
+        price: "39,99€",
+        oldPrice: "60€",
+        eyebrow: "Colección Marca Invisible",
+        sizes: ["S", "M", "L", "XL", "2XL"],
+        colors: [
+          {
+            name: "Negro",
+            images: [
+              "/camiseta-especial-front.jpg",
+              "/camiseta-especial-back.jpg",
+              "/camiseta-especial-hanger.jpg",
+              "/camiseta-especial-label.jpg",
+            ],
+          },
+        ],
+        variantIds: {
+          Negro: {
+            S: "57788900606335",
+            M: "57788900639103",
+            L: "57788900671871",
+            XL: "57788900704639",
+            "2XL": "57788900737407",
+          },
+        },
+      },
+    ],
+  },
+  {
+    title: "Colección Sector Construcción",
+    description: "Para quienes levantan, reparan y sostienen lo que otros dan por hecho.",
+    products: [
+      {
+        slug: "albaniles",
+        title: "ALBAÑILES",
+        subtitle: "SIN NOSOTROS, TODO SE VIENE ABAJO.",
+        price: "39,99€",
+        oldPrice: "60€",
+        eyebrow: "Sector Construcción",
+        sizes: ["S", "M", "L", "XL", "XXL"],
+        colors: [
+          {
+            name: "Negro",
+            images: ["/black-front.png.png", "/black-back.png.png", "/black-model.png"],
+          },
+          {
+            name: "Blanco",
+            images: ["/white-front.png", "/white-back.png", "/white-model.png"],
+          },
+          {
+            name: "Aloe",
+            images: ["/aloe-front.png", "/aloe-back.png", "/aloe-model.png.png"],
+          },
+        ],
+        variantIds: {
+          Negro: {
+            S: "57562408321407",
+            M: "57562408354175",
+            L: "57562408386943",
+            XL: "57562408419711",
+            XXL: "57646753153407",
+          },
+          Blanco: {
+            S: "57562408452479",
+            M: "57562408485247",
+            L: "57562408518015",
+            XL: "57562408550783",
+            XXL: "57646755643775",
+          },
+          Aloe: {
+            S: "57577044279679",
+            M: "57577044312447",
+            L: "57577044345215",
+            XL: "57577044377983",
+            XXL: "57646756069759",
+          },
+        },
+      },
+    ],
+  },
+];
 
-const variantIds = {
-  Negro: {
-    S: "57562408321407",
-    M: "57562408354175",
-    L: "57562408386943",
-    XL: "57562408419711",
-    XXL: "57646753153407",
-  },
-  Blanco: {
-    S: "57562408452479",
-    M: "57562408485247",
-    L: "57562408518015",
-    XL: "57562408550783",
-    XXL: "57646755643775",
-  },
-  Aloe: {
-    S: "57577044279679",
-    M: "57577044312447",
-    L: "57577044345215",
-    XL: "57577044377983",
-    XXL: "57646756069759",
-  },
-};
-
+const getAllProducts = () => collections.flatMap((collection) => collection.products);
 const addToCart = () => {
   const variantId = variantIds[selectedColor][selectedSize];
 
