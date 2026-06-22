@@ -194,7 +194,42 @@ const checkoutUrl = checkoutLinks[selectedColor];
         <h2>TODOS SOMOS INVISIBLES PARA ALGUIEN.</h2>
         <p>Pero sin nosotros, nada funciona.</p>
       </section>
+<section className="collections-section">
+  <p className="eyebrow">Colecciones</p>
+  <h2>ELIGE TU CAMISETA</h2>
 
+  {collections.map((collection) => (
+    <div key={collection.title} className="collection-block">
+      <div className="collection-header">
+        <h3>{collection.title}</h3>
+        <p>{collection.description}</p>
+      </div>
+
+      <div className="product-cards">
+        {collection.products.map((item) => (
+          <button
+            key={item.slug}
+            onClick={() => {
+              setSelectedProductSlug(item.slug);
+              setSelectedColor(item.colors[0].name);
+              setSelectedSize(item.sizes[0]);
+              setSelectedImageIndex(0);
+            }}
+            className={
+              selectedProduct.slug === item.slug
+                ? "product-card active"
+                : "product-card"
+            }
+          >
+            <img src={item.colors[0].images[0]} alt={item.title} />
+            <span>{item.title}</span>
+            <small>{item.subtitle}</small>
+          </button>
+        ))}
+      </div>
+    </div>
+  ))}
+</section>
       <section id="comprar" className="product-section">
         <div className="product-grid">
           <div className="gallery">
