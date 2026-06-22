@@ -91,8 +91,33 @@ const collections = [
 ];
 
 const getAllProducts = () => collections.flatMap((collection) => collection.products);
-const addToCart = () => {
-  const variantId = variantIds[selectedColor][selectedSize];
+
+export default function App() {
+  const allProducts = getAllProducts();
+
+  const [selectedProductSlug, setSelectedProductSlug] = useState("camiseta-especial");
+
+  const selectedProduct =
+    allProducts.find((item) => item.slug === selectedProductSlug) ||
+    allProducts[0];
+
+  const [selectedColor, setSelectedColor] = useState(
+    selectedProduct.colors[0].name
+  );
+
+  const [selectedSize, setSelectedSize] = useState(
+    selectedProduct.sizes[0]
+  );
+
+  const [selectedImageIndex, setSelectedImageIndex] = useState(0);
+
+  const [cookiesAccepted, setCookiesAccepted] = useState(false);
+
+  const [cart, setCart] = useState([]);
+
+  const addToCart = () => {
+  const variantId =
+  selectedProduct.variantIds[selectedColor][selectedSize];
 
   const existingItem = cart.find(
     (item) => item.color === selectedColor && item.size === selectedSize
