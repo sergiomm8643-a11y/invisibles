@@ -263,7 +263,7 @@ const checkoutUrl = checkoutLinks[selectedColor];
             <div className="thumbs">
               {selectedColorData.images.map((image, index) => (
                 <button key={index} onClick={() => setSelectedImageIndex(index)} className={selectedImageIndex === index ? "thumb active" : "thumb"}>
-                  <img src={image} alt={`Imagen ${index + 1}`} />
+                  <img src={image} alt="" />
                 </button>
               ))}
             </div>
