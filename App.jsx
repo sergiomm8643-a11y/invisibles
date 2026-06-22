@@ -17,11 +17,10 @@ const collections = [
           {
             name: "Negro",
             images: [
-              "/camiseta-especial-front.jpg",
-              "/camiseta-especial-back.jpg",
-              "/camiseta-especial-hanger.jpg",
-              "/camiseta-especial-label.jpg",
-            ],
+  "/camiseta-especial-front.jpg",
+  "/camiseta-especial-back.jpg",
+  "/camiseta-especial-hanger.jpg",
+],
           },
         ],
         variantIds: {
