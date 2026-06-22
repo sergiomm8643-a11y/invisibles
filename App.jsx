@@ -257,14 +257,24 @@ const checkoutUrl = checkoutLinks[selectedColor];
             </div>
           </div>
 
-          <div className="product-info">
-            <p className="eyebrow">Primera colección oficial</p>
-            <h2>{product.title}</h2>
-            <p className="subtitle">{product.subtitle}</p>
-            <div className="price-block">
-  <div className="price-row">
-    <span className="old-price">60€</span>
-    <span className="price">39,99€</span>
+        <div className="product-info">
+  <p className="eyebrow">{selectedProduct.eyebrow}</p>
+
+  <h2>{selectedProduct.title}</h2>
+
+  <p className="subtitle">
+    {selectedProduct.subtitle}
+  </p>
+
+  <div className="price-block">
+    <div className="price-row">
+      <span className="old-price">
+        {selectedProduct.oldPrice}
+      </span>
+
+      <span className="price">
+        {selectedProduct.price}
+      </span> 
   </div>
 
   <div className="offer-badge">
