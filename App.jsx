@@ -17,9 +17,9 @@ const collections = [
           {
             name: "Negro",
             images: [
-  "/camiseta-especial-front.jpg.PNG",
-  "/camiseta-especial-back.jpg.PNG",
-  "/camiseta-especial-hanger.jpg.PNG",
+  "/camiseta-especial-front.jpg.PNG.2.png",
+  "/camiseta-especial-back.jpg.PNG.2.png",
+  "/camiseta-especial-hanger.jpg.PNG.2.png",
 ],
           },
         ],
