@@ -156,7 +156,10 @@ const checkoutCart = () => {
   window.location.href = `https://vqzkc0-xx.myshopify.com/cart/${cartUrl}`;
 };
 
-  const selectedColorData = product.colors.find((color) => color.name === selectedColor) || product.colors[0];
+  const selectedColorData =
+  selectedProduct.colors.find(
+    (color) => color.name === selectedColor
+  ) || selectedProduct.colors[0];
   const selectedImage = selectedColorData.images[selectedImageIndex] || selectedColorData.images[0];
  const checkoutLinks = {
   Negro: "https://vqzkc0-xx.myshopify.com/cart/57562408354175:1?return_to=https://invisibles.online",
@@ -240,7 +243,7 @@ const checkoutUrl = checkoutLinks[selectedColor];
             </div>
 
             <div className="color-cards">
-              {product.colors.map((color) => (
+              {selectedProduct.colors.map((color) => (
                 <button key={color.name} onClick={() => { setSelectedColor(color.name); setSelectedImageIndex(0); }} className={selectedColor === color.name ? "color-card active" : "color-card"}>
                   <img src={color.images[0]} alt={color.name} />
                   <span>{color.name}</span>
@@ -285,7 +288,7 @@ const checkoutUrl = checkoutLinks[selectedColor];
             <div className="selector">
               <p>Color seleccionado</p>
               <div className="selector-row">
-                {product.colors.map((color) => (
+                {selectedProduct.colors.map((color) => (
                   <button key={color.name} onClick={() => { setSelectedColor(color.name); setSelectedImageIndex(0); }} className={selectedColor === color.name ? "pill active" : "pill"}>{color.name}</button>
                 ))}
               </div>
