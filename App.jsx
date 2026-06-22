@@ -214,11 +214,20 @@ const checkoutUrl = checkoutLinks[selectedColor];
           <button
             key={item.slug}
             onClick={() => {
-              setSelectedProductSlug(item.slug);
-              setSelectedColor(item.colors[0].name);
-              setSelectedSize(item.sizes[0]);
-              setSelectedImageIndex(0);
-            }}
+  setSelectedProductSlug(item.slug);
+  setSelectedColor(item.colors[0].name);
+  setSelectedSize(item.sizes[0]);
+  setSelectedImageIndex(0);
+
+  setTimeout(() => {
+    document
+      .getElementById("comprar")
+      ?.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+  }, 100);
+}}
             className={
               selectedProduct.slug === item.slug
                 ? "product-card active"
