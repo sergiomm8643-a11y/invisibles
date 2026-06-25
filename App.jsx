@@ -2,105 +2,99 @@ import { useState } from "react";
 
 const collections = [
   {
-    title: "Colección Marca Invisible",
-    description: "La esencia de LOS INVISIBLES. Sin sectores. Solo identidad.",
-    products: [
-      {
-  slug: "camiseta-especial",
-  gender: "hombre",
-  title: "INVISIBLES – Camiseta Especial",
-        subtitle: "Lo que no se ve, mueve el mundo.",
-        price: "39,99€",
-        oldPrice: "60€",
-        eyebrow: "Colección Marca Invisible",
-        sizes: ["S", "M", "L", "XL", "2XL"],
-        colors: [
-  {
-    name: "Negro",
-    images: [
-      "/camiseta-especial-hanger.jpg.PNG.2.png",
-      "/camiseta-especial-back.jpg.PNG.2.png",
-      "/camiseta-especial-front.jpg.PNG.2.png",
-    ],
-  },
-  {
-    name: "Blanco",
-    images: [
-      "/camiseta-especial-hanger.jpg.PNG.blanco.png",
-      "/camiseta-especial-back.jpg.PNG.blanco.png",
-      "/camiseta-especial-front.jpg.PNG.blanco.png",
-    ],
-  },
-],
-        variantIds: {
-  Blanco: {
-    S: "57788900606335",
-    M: "57788900639103",
-    L: "57788900671871",
-    XL: "57788900704639",
-    "2XL": "57788900737407",
-  },
-
-  Negro: {
-    S: "57813356380543",
-    M: "57813356413311",
-    L: "57813356446079",
-    XL: "57813356478847",
-    "2XL": "57813356511615",
-  },
-},
+  title: "Colección Marca Invisible",
+  description: "La esencia de LOS INVISIBLES. Sin sectores. Solo identidad.",
+  products: [
+    {
+      slug: "camiseta-especial",
+      gender: "hombre",
+      title: "INVISIBLES – Camiseta Especial",
+      subtitle: "Lo que no se ve, mueve el mundo.",
+      price: "39,99€",
+      oldPrice: "60€",
+      eyebrow: "Colección Marca Invisible",
+      sizes: ["S", "M", "L", "XL", "2XL"],
+      colors: [
+        {
+          name: "Negro",
+          images: [
+            "/camiseta-especial-hanger.jpg.PNG.2.png",
+            "/camiseta-especial-back.jpg.PNG.2.png",
+            "/camiseta-especial-front.jpg.PNG.2.png",
+          ],
+        },
+        {
+          name: "Blanco",
+          images: [
+            "/camiseta-especial-hanger.jpg.PNG.blanco.png",
+            "/camiseta-especial-back.jpg.PNG.blanco.png",
+            "/camiseta-especial-front.jpg.PNG.blanco.png",
+          ],
+        },
+      ],
+      variantIds: {
+        Blanco: {
+          S: "57788900606335",
+          M: "57788900639103",
+          L: "57788900671871",
+          XL: "57788900704639",
+          "2XL": "57788900737407",
+        },
+        Negro: {
+          S: "57813356380543",
+          M: "57813356413311",
+          L: "57813356446079",
+          XL: "57813356478847",
+          "2XL": "57813356511615",
+        },
       },
-    ],
-    {
-  slug: "camiseta-especial-mujer",
-  gender: "mujer",
-  title: "INVISIBLES – Camiseta Especial",
-  subtitle: "Lo que no se ve, mueve el mundo.",
-  price: "39,99€",
-  oldPrice: "60€",
-  eyebrow: "Colección Marca Invisible",
-
-  sizes: ["S", "M", "L", "XL", "XXL"],
-
-  colors: [
-    {
-      name: "Negro",
-      images: [
-        "/camiseta-especial-delante-mujer-negra.png",
-        "/camiseta-especial-detras-mujer-negra.png",
-        "/camiseta-especial-percha-mujer-negra.png",
-      ],
     },
-
     {
-      name: "Blanco",
-      images: [
-        "/camiseta-especial-delante-mujer-blanca.png",
-        "/camiseta-especial-detras-mujer-blanca.png",
-        "/camiseta-especial-percha-mujer-blanca.png",
+      slug: "camiseta-especial-mujer",
+      gender: "mujer",
+      title: "INVISIBLES – Camiseta Especial",
+      subtitle: "Lo que no se ve, mueve el mundo.",
+      price: "39,99€",
+      oldPrice: "60€",
+      eyebrow: "Colección Marca Invisible",
+      sizes: ["S", "M", "L", "XL", "XXL"],
+      colors: [
+        {
+          name: "Negro",
+          images: [
+            "/camiseta-especial-delante-mujer-negra.png",
+            "/camiseta-especial-detras-mujer-negra.png",
+            "/camiseta-especial-percha-mujer-negra.png",
+          ],
+        },
+        {
+          name: "Blanco",
+          images: [
+            "/camiseta-especial-delante-mujer-blanca.png",
+            "/camiseta-especial-detras-mujer-blanca.png",
+            "/camiseta-especial-percha-mujer-blanca.png",
+          ],
+        },
       ],
+      variantIds: {
+        Blanco: {
+          S: "57830285115775",
+          M: "57830285148543",
+          L: "57830285181311",
+          XL: "57830285214079",
+          XXL: "57830285246847",
+        },
+        Negro: {
+          S: "57830285279615",
+          M: "57830285312383",
+          L: "57830285345151",
+          XL: "57830285377919",
+          XXL: "57830285410687",
+        },
+      },
     },
   ],
-
-  variantIds: {
-    Blanco: {
-      S: "57830285115775",
-      M: "57830285148543",
-      L: "57830285181311",
-      XL: "57830285214079",
-      XXL: "57830285246847",
-    },
-
-    Negro: {
-      S: "57830285279615",
-      M: "57830285312383",
-      L: "57830285345151",
-      XL: "57830285377919",
-      XXL: "57830285410687",
-    },
-  },
 },
-  },
   {
   title: "Colección Sector Construcción",
   description: "Para quienes levantan, reparan y sostienen lo que otros dan por hecho.",
