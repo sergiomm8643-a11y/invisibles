@@ -53,156 +53,146 @@ const collections = [
     ],
   },
   {
-    title: "Colección Sector Construcción",
-    description: "Para quienes levantan, reparan y sostienen lo que otros dan por hecho.",
-    products: [
-      {
-        slug: "albaniles",
-        gender: "hombre",
-        title: "ALBAÑILES",
-        subtitle: "SIN NOSOTROS, TODO SE VIENE ABAJO.",
-        price: "39,99€",
-        oldPrice: "60€",
-        eyebrow: "Sector Construcción",
-        sizes: ["S", "M", "L", "XL", "XXL"],
-        colors: [
-          {
-            name: "Negro",
-            images: ["/black-front.png.png", "/black-back.png.png", "/black-model.png"],
-          },
-          {
-            name: "Blanco",
-            images: ["/white-front.png", "/white-back.png", "/white-model.png"],
-          },
-          {
-            name: "Aloe",
-            images: ["/aloe-front.png", "/aloe-back.png", "/aloe-model.png.png"],
-          },
-        ],
-        variantIds: {
-          Negro: {
-            S: "57562408321407",
-            M: "57562408354175",
-            L: "57562408386943",
-            XL: "57562408419711",
-            XXL: "57646753153407",
-          },
-          Blanco: {
-            S: "57562408452479",
-            M: "57562408485247",
-            L: "57562408518015",
-            XL: "57562408550783",
-            XXL: "57646755643775",
-          },
-          Aloe: {
-            S: "57577044279679",
-            M: "57577044312447",
-            L: "57577044345215",
-            XL: "57577044377983",
-            XXL: "57646756069759",
-          },
+  title: "Colección Sector Construcción",
+  description: "Para quienes levantan, reparan y sostienen lo que otros dan por hecho.",
+  products: [
+    {
+      slug: "albaniles",
+      gender: "hombre",
+      title: "ALBAÑILES",
+      subtitle: "SIN NOSOTROS, TODO SE VIENE ABAJO.",
+      price: "39,99€",
+      oldPrice: "60€",
+      eyebrow: "Sector Construcción",
+      sizes: ["S", "M", "L", "XL", "XXL"],
+      colors: [
+        {
+          name: "Negro",
+          images: ["/black-front.png.png", "/black-back.png.png", "/black-model.png"],
+        },
+        {
+          name: "Blanco",
+          images: ["/white-front.png", "/white-back.png", "/white-model.png"],
+        },
+        {
+          name: "Aloe",
+          images: ["/aloe-front.png", "/aloe-back.png", "/aloe-model.png.png"],
+        },
+      ],
+      variantIds: {
+        Negro: {
+          S: "57562408321407",
+          M: "57562408354175",
+          L: "57562408386943",
+          XL: "57562408419711",
+          XXL: "57646753153407",
+        },
+        Blanco: {
+          S: "57562408452479",
+          M: "57562408485247",
+          L: "57562408518015",
+          XL: "57562408550783",
+          XXL: "57646755643775",
+        },
+        Aloe: {
+          S: "57577044279679",
+          M: "57577044312447",
+          L: "57577044345215",
+          XL: "57577044377983",
+          XXL: "57646756069759",
         },
       },
-{
-  slug: "arquitectos",
-  gender: "hombre",
-  title: "ARQUITECTOS",
-  subtitle: "SIN NOSOTROS, LAS IDEAS NO SE CONSTRUYEN.",
-  price: "39,99€",
-  oldPrice: "60€",
-  eyebrow: "Sector Construcción",
-
-  sizes: ["S", "M", "L", "XL", "XXL"],
-
-  colors: [
-    {
-      name: "Negro",
-      images: [
-        "/arquitecto-delante-negra.png",
-        "/arquitecto-detras-negra.png",
-        "/arquitecto-percha-negra.png",
-      ],
     },
-
     {
-      name: "Blanco",
-      images: [
-        "/arquitecto-delante-blanca.png",
-        "/arquitecto-detras-blanca.png",
-        "/arquitecto-percha-blanca.png",
+      slug: "arquitectos",
+      gender: "hombre",
+      title: "ARQUITECTOS",
+      subtitle: "SIN NOSOTROS, LAS IDEAS NO SE CONSTRUYEN.",
+      price: "39,99€",
+      oldPrice: "60€",
+      eyebrow: "Sector Construcción",
+      sizes: ["S", "M", "L", "XL", "XXL"],
+      colors: [
+        {
+          name: "Negro",
+          images: [
+            "/arquitecto-delante-negra.png",
+            "/arquitecto-detras-negra.png",
+            "/arquitecto-percha-negra.png",
+          ],
+        },
+        {
+          name: "Blanco",
+          images: [
+            "/arquitecto-delante-blanca.png",
+            "/arquitecto-detras-blanca.png",
+            "/arquitecto-percha-blanca.png",
+          ],
+        },
       ],
+      variantIds: {
+        Blanco: {
+          S: "57824158286207",
+          M: "57824158318975",
+          L: "57824158351743",
+          XL: "57824158384511",
+          XXL: "57824158417279",
+        },
+        Negro: {
+          S: "57824158122367",
+          M: "57824158155135",
+          L: "57824158187903",
+          XL: "57824158220671",
+          XXL: "57824158253439",
+        },
+      },
+    },
+    {
+      slug: "arquitectas",
+      gender: "mujer",
+      title: "ARQUITECTAS",
+      subtitle: "SIN NOSOTRAS, LAS IDEAS NO SE CONSTRUYEN.",
+      price: "39,99€",
+      oldPrice: "60€",
+      eyebrow: "Sector Construcción",
+      sizes: ["S", "M", "L", "XL", "XXL"],
+      colors: [
+        {
+          name: "Negro",
+          images: [
+            "/arquitecta-delante-negra.png",
+            "/arquitecta-detras-negra.png",
+            "/arquitecta-suelo-negra.png",
+          ],
+        },
+        {
+          name: "Blanco",
+          images: [
+            "/arquitecta-delante-blanca.png",
+            "/arquitecta-detras-blanca.png",
+            "/arquitecta-suelo-blanca.png",
+          ],
+        },
+      ],
+      variantIds: {
+        Blanco: {
+          S: "57824236241279",
+          M: "57824236274047",
+          L: "57824236306815",
+          XL: "57824236339583",
+          XXL: "57824236372351",
+        },
+        Negro: {
+          S: "57824236405119",
+          M: "57824236437887",
+          L: "57824236470655",
+          XL: "57824236503423",
+          XXL: "57824236536191",
+        },
+      },
     },
   ],
-
-  variantIds: {
-    Blanco: {
-      S: "57824158286207",
-      M: "57824158318975",
-      L: "57824158351743",
-      XL: "57824158384511",
-      XXL: "57824158417279",
-    },
-
-    Negro: {
-      S: "57824158122367",
-      M: "57824158155135",
-      L: "57824158187903",
-      XL: "57824158220671",
-      XXL: "57824158253439",
-    },
-  },
-}
-   {
-  slug: "arquitectas",
-  gender: "mujer",
-  title: "ARQUITECTAS",
-  subtitle: "SIN NOSOTRAS, LAS IDEAS NO SE CONSTRUYEN.",
-  price: "39,99€",
-  oldPrice: "60€",
-  eyebrow: "Sector Construcción",
-
-  sizes: ["S", "M", "L", "XL", "XXL"],
-
-  colors: [
-    {
-      name: "Negro",
-      images: [
-        "/arquitecta-delante-negra.png",
-        "/arquitecta-detras-negra.png",
-        "/arquitecta-suelo-negra.png",
-      ],
-    },
-
-    {
-      name: "Blanco",
-      images: [
-        "/arquitecta-delante-blanca.png",
-        "/arquitecta-detras-blanca.png",
-        "/arquitecta-suelo-blanca.png",
-      ],
-    },
-  ],
-
-  variantIds: {
-    Blanco: {
-      S: "57824236241279",
-      M: "57824236274047",
-      L: "57824236306815",
-      XL: "57824236339583",
-      XXL: "57824236372351",
-    },
-
-    Negro: {
-      S: "57824236405119",
-      M: "57824236437887",
-      L: "57824236470655",
-      XL: "57824236503423",
-      XXL: "57824236536191",
-    },
-  },
-}, 
-],      
-} 
+},
 
 const getAllProducts = () => collections.flatMap((collection) => collection.products);
 
