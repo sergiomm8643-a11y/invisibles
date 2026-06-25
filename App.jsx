@@ -51,6 +51,55 @@ const collections = [
 },
       },
     ],
+    {
+  slug: "camiseta-especial-mujer",
+  gender: "mujer",
+  title: "INVISIBLES – Camiseta Especial",
+  subtitle: "Lo que no se ve, mueve el mundo.",
+  price: "39,99€",
+  oldPrice: "60€",
+  eyebrow: "Colección Marca Invisible",
+
+  sizes: ["S", "M", "L", "XL", "XXL"],
+
+  colors: [
+    {
+      name: "Negro",
+      images: [
+        "/camiseta-especial-delante-mujer-negra.png",
+        "/camiseta-especial-detras-mujer-negra.png",
+        "/camiseta-especial-percha-mujer-negra.png",
+      ],
+    },
+
+    {
+      name: "Blanco",
+      images: [
+        "/camiseta-especial-delante-mujer-blanca.png",
+        "/camiseta-especial-detras-mujer-blanca.png",
+        "/camiseta-especial-percha-mujer-blanca.png",
+      ],
+    },
+  ],
+
+  variantIds: {
+    Blanco: {
+      S: "57830285115775",
+      M: "57830285148543",
+      L: "57830285181311",
+      XL: "57830285214079",
+      XXL: "57830285246847",
+    },
+
+    Negro: {
+      S: "57830285279615",
+      M: "57830285312383",
+      L: "57830285345151",
+      XL: "57830285377919",
+      XXL: "57830285410687",
+    },
+  },
+},
   },
   {
   title: "Colección Sector Construcción",
