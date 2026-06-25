@@ -103,9 +103,6 @@ const collections = [
           },
         },
       },
-    ],
-  },
-];
 {
   slug: "arquitectos",
   gender: "hombre",
@@ -203,6 +200,8 @@ const collections = [
       XXL: "57824236536191",
     },
   },
+}, 
+],      
 } 
 
 const getAllProducts = () => collections.flatMap((collection) => collection.products);
