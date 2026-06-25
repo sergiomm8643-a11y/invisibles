@@ -106,6 +106,104 @@ const collections = [
     ],
   },
 ];
+{
+  slug: "arquitectos",
+  gender: "hombre",
+  title: "ARQUITECTOS",
+  subtitle: "SIN NOSOTROS, LAS IDEAS NO SE CONSTRUYEN.",
+  price: "39,99€",
+  oldPrice: "60€",
+  eyebrow: "Sector Construcción",
+
+  sizes: ["S", "M", "L", "XL", "XXL"],
+
+  colors: [
+    {
+      name: "Negro",
+      images: [
+        "/arquitecto-delante-negra.png",
+        "/arquitecto-detras-negra.png",
+        "/arquitecto-percha-negra.png",
+      ],
+    },
+
+    {
+      name: "Blanco",
+      images: [
+        "/arquitecto-delante-blanca.png",
+        "/arquitecto-detras-blanca.png",
+        "/arquitecto-percha-blanca.png",
+      ],
+    },
+  ],
+
+  variantIds: {
+    Blanco: {
+      S: "57824158286207",
+      M: "57824158318975",
+      L: "57824158351743",
+      XL: "57824158384511",
+      XXL: "57824158417279",
+    },
+
+    Negro: {
+      S: "57824158122367",
+      M: "57824158155135",
+      L: "57824158187903",
+      XL: "57824158220671",
+      XXL: "57824158253439",
+    },
+  },
+}
+   {
+  slug: "arquitectas",
+  gender: "mujer",
+  title: "ARQUITECTAS",
+  subtitle: "SIN NOSOTRAS, LAS IDEAS NO SE CONSTRUYEN.",
+  price: "39,99€",
+  oldPrice: "60€",
+  eyebrow: "Sector Construcción",
+
+  sizes: ["S", "M", "L", "XL", "XXL"],
+
+  colors: [
+    {
+      name: "Negro",
+      images: [
+        "/arquitecta-delante-negra.png",
+        "/arquitecta-detras-negra.png",
+        "/arquitecta-suelo-negra.png",
+      ],
+    },
+
+    {
+      name: "Blanco",
+      images: [
+        "/arquitecta-delante-blanca.png",
+        "/arquitecta-detras-blanca.png",
+        "/arquitecta-suelo-blanca.png",
+      ],
+    },
+  ],
+
+  variantIds: {
+    Blanco: {
+      S: "57824236241279",
+      M: "57824236274047",
+      L: "57824236306815",
+      XL: "57824236339583",
+      XXL: "57824236372351",
+    },
+
+    Negro: {
+      S: "57824236405119",
+      M: "57824236437887",
+      L: "57824236470655",
+      XL: "57824236503423",
+      XXL: "57824236536191",
+    },
+  },
+} 
 
 const getAllProducts = () => collections.flatMap((collection) => collection.products);
 
