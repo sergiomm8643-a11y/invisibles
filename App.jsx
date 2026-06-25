@@ -193,7 +193,7 @@ const collections = [
     },
   ],
 },
-
+];
 const getAllProducts = () => collections.flatMap((collection) => collection.products);
 
 export default function App() {
