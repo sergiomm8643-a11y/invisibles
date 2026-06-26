@@ -329,6 +329,105 @@ function LegalPage({ page, onBack }) {
     </main>
   );
 }
+```jsx
+function PrivacyPage({ onBack }) {
+  return (
+    <main className="legal-page">
+      <section className="legal-hero">
+        <p className="eyebrow">LOS INVISIBLES</p>
+        <h1>POLÍTICA DE PRIVACIDAD</h1>
+      </section>
+
+      <section className="legal-content">
+
+        <h2>1. Responsable del tratamiento</h2>
+
+        <p>
+          El responsable del tratamiento de los datos personales recogidos a
+          través del presente sitio web es:
+        </p>
+
+        <p>
+          <strong>Subareformas D S.L.</strong><br />
+          CIF: B98624059<br />
+          Calle Marqués del Turia 13, 7<br />
+          46210 Picanya (Valencia)<br />
+          España
+        </p>
+
+        <p>
+          Correo electrónico:<br />
+          <strong>losinvisiblesbrand@gmail.com</strong>
+        </p>
+
+        <h2>2. Datos que recopilamos</h2>
+
+        <p>
+          Podemos recopilar los datos necesarios para gestionar tus pedidos,
+          responder a tus consultas y mejorar la experiencia de navegación.
+        </p>
+
+        <p>
+          Entre ellos pueden encontrarse:
+        </p>
+
+        <ul>
+          <li>Nombre y apellidos.</li>
+          <li>Dirección de envío.</li>
+          <li>Correo electrónico.</li>
+          <li>Teléfono (si se facilita).</li>
+          <li>Información necesaria para la gestión del pedido.</li>
+        </ul>
+
+        <h2>3. Finalidad</h2>
+
+        <p>
+          Utilizamos los datos personales únicamente para:
+        </p>
+
+        <ul>
+          <li>Procesar y gestionar los pedidos.</li>
+          <li>Enviar comunicaciones relacionadas con la compra.</li>
+          <li>Atender consultas.</li>
+          <li>Cumplir nuestras obligaciones legales.</li>
+        </ul>
+
+        <h2>4. Conservación</h2>
+
+        <p>
+          Los datos se conservarán durante el tiempo necesario para cumplir con
+          las obligaciones legales y contractuales aplicables.
+        </p>
+
+        <h2>5. Derechos</h2>
+
+        <p>
+          Puedes ejercer tus derechos de acceso, rectificación, supresión,
+          oposición, limitación del tratamiento y portabilidad enviando una
+          solicitud a:
+        </p>
+
+        <p>
+          <strong>losinvisiblesbrand@gmail.com</strong>
+        </p>
+
+        <h2>6. Seguridad</h2>
+
+        <p>
+          Aplicamos medidas técnicas y organizativas adecuadas para proteger la
+          información personal de nuestros clientes.
+        </p>
+
+        <button className="btn btn-primary" onClick={onBack}>
+          VOLVER A LA TIENDA
+        </button>
+
+      </section>
+    </main>
+  );
+}
+```
+
 export default function App() {
   const allProducts = getAllProducts();
 
