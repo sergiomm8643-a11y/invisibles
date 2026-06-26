@@ -238,7 +238,7 @@ const collections = [
 },
 ];
 const getAllProducts = () => collections.flatMap((collection) => collection.products);
-function LegalPage({ onBack }) {
+function LegalPage({ page, onBack }) {
   return (
     <main className="legal-page">
       <section className="legal-hero">
@@ -431,8 +431,13 @@ const checkoutCart = () => {
   Aloe: "https://vqzkc0-xx.myshopify.com/cart/57577044312447:1?return_to=https://invisibles.online",
 }; 
 const checkoutUrl = checkoutLinks[selectedColor];
-if (currentPage === "legal") {
-  return <LegalPage onBack={() => setCurrentPage("home")} />;
+if (currentPage !== "home") {
+  return (
+    <LegalPage
+      page={currentPage}
+      onBack={() => setCurrentPage("home")}
+    />
+  );
 }
   return (
     <main className="site">
