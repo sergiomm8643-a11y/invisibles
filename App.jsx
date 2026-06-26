@@ -374,18 +374,18 @@ const checkoutUrl = checkoutLinks[selectedColor];
   <p className="eyebrow">Colecciones</p>
   <div className="gender-tabs">
   <button
-    className={selectedGender === "hombre" ? "active" : ""}
-    onClick={() => setSelectedGender("hombre")}
-  >
-    HOMBRE
-  </button>
+  className={selectedGender === "hombre" ? "active" : ""}
+  onClick={() => changeGender("hombre")}
+>
+  HOMBRE
+</button>
 
   <button
-    className={selectedGender === "mujer" ? "active" : ""}
-    onClick={() => setSelectedGender("mujer")}
-  >
-    MUJER
-  </button>
+  className={selectedGender === "mujer" ? "active" : ""}
+  onClick={() => changeGender("mujer")}
+>
+  MUJER
+</button>
 </div>
   <h2>ELIGE TU CAMISETA</h2>
 
