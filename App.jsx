@@ -681,7 +681,9 @@ if (currentPage === "legal") {
       Contacto
     </a>
 
-    <a href="#legal">Aviso legal</a>
+   <button className="footer-link" onClick={() => setCurrentPage("legal")}>
+  Aviso legal
+</button>
     <a href="#legal">Privacidad</a>
     <a href="#legal">Cookies</a>
     <a href="#legal">Envíos</a>
