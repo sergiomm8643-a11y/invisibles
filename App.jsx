@@ -530,13 +530,12 @@ const checkoutCart = () => {
   Aloe: "https://vqzkc0-xx.myshopify.com/cart/57577044312447:1?return_to=https://invisibles.online",
 }; 
 const checkoutUrl = checkoutLinks[selectedColor];
-if (currentPage !== "home") {
-  return (
-    <LegalPage
-      page={currentPage}
-      onBack={() => setCurrentPage("home")}
-    />
-  );
+if (currentPage === "legal") {
+  return <LegalPage onBack={() => setCurrentPage("home")} />;
+}
+
+if (currentPage === "privacy") {
+  return <PrivacyPage onBack={() => setCurrentPage("home")} />;
 }
   return (
     <main className="site">
