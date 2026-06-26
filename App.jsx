@@ -261,6 +261,7 @@ export default function App() {
   const [cookiesAccepted, setCookiesAccepted] = useState(false);
 
   const [cart, setCart] = useState([]);
+ const [currentPage, setCurrentPage] = useState("home"); 
 const visibleCollections = collections
   .map((collection) => ({
     ...collection,
