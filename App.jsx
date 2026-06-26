@@ -238,7 +238,97 @@ const collections = [
 },
 ];
 const getAllProducts = () => collections.flatMap((collection) => collection.products);
+function LegalPage({ onBack }) {
+  return (
+    <main className="legal-page">
+      <section className="legal-hero">
+        <p className="eyebrow">LOS INVISIBLES</p>
+        <h1>AVISO LEGAL</h1>
+      </section>
 
+      <section className="legal-content">
+        <h2>1. Titular del sitio web</h2>
+
+        <p>
+          En cumplimiento de la Ley 34/2002, de Servicios de la Sociedad de la
+          Información y Comercio Electrónico (LSSI-CE), se informa que el
+          presente sitio web es titularidad de:
+        </p>
+
+        <p>
+          <strong>Subareformas D S.L.</strong><br />
+          CIF: B98624059<br />
+          Calle Marqués del Turia 13, 7<br />
+          46210 Picanya (Valencia)<br />
+          España
+        </p>
+
+        <p>
+          Correo electrónico:<br />
+          <strong>losinvisiblesbrand@gmail.com</strong>
+        </p>
+
+        <h2>2. Objeto</h2>
+
+        <p>
+          El presente sitio web tiene como finalidad la venta online de prendas
+          textiles de la marca LOS INVISIBLES, así como informar sobre sus
+          colecciones, productos y actividad.
+        </p>
+
+        <h2>3. Condiciones de uso</h2>
+
+        <p>
+          El acceso y utilización del sitio web implica la aceptación de las
+          presentes condiciones de uso. El usuario se compromete a utilizar la
+          web conforme a la legislación vigente, la buena fe y el orden público.
+        </p>
+
+        <h2>4. Propiedad intelectual e industrial</h2>
+
+        <p>
+          Todos los diseños, ilustraciones, logotipos, imágenes, fotografías,
+          textos y elementos gráficos de LOS INVISIBLES son propiedad de
+          Subareformas D S.L. o cuentan con las autorizaciones necesarias para
+          su utilización.
+        </p>
+
+        <p>
+          Queda prohibida su reproducción, distribución, transformación o uso
+          sin autorización expresa del titular.
+        </p>
+
+        <h2>5. Responsabilidad</h2>
+
+        <p>
+          Subareformas D S.L. no será responsable de los daños derivados de un
+          uso incorrecto del sitio web ni de interrupciones del servicio
+          motivadas por causas ajenas a su control.
+        </p>
+
+        <h2>6. Enlaces externos</h2>
+
+        <p>
+          Este sitio web puede contener enlaces a páginas de terceros.
+          Subareformas D S.L. no se responsabiliza del contenido ni de las
+          políticas de dichos sitios externos.
+        </p>
+
+        <h2>7. Legislación aplicable</h2>
+
+        <p>
+          El presente aviso legal se rige por la legislación española. Para
+          cualquier controversia serán competentes los Juzgados y Tribunales que
+          correspondan conforme a la normativa vigente.
+        </p>
+
+        <button className="btn btn-primary" onClick={onBack}>
+          VOLVER A LA TIENDA
+        </button>
+      </section>
+    </main>
+  );
+}
 export default function App() {
   const allProducts = getAllProducts();
 
