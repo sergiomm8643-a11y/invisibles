@@ -269,6 +269,24 @@ const visibleCollections = collections
     ),
   }))
   .filter((collection) => collection.products.length > 0);
+  const changeGender = (gender) => {
+  const availableProducts = collections
+    .flatMap((collection) => collection.products)
+    .filter((product) => product.gender === gender);
+
+  const firstProduct = availableProducts[0];
+
+  if (!firstProduct) {
+    setSelectedGender(gender);
+    return;
+  }
+
+  setSelectedGender(gender);
+  setSelectedProductSlug(firstProduct.slug);
+  setSelectedColor(firstProduct.colors[0].name);
+  setSelectedSize(firstProduct.sizes[0]);
+  setSelectedImageIndex(0);
+};
   const addToCart = () => {
   const variantId =
   selectedProduct.variantIds[selectedColor][selectedSize];
