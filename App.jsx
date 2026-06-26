@@ -425,8 +425,7 @@ function PrivacyPage({ onBack }) {
     </main>
   );
 }
-```jsx
-}
+
 export default function App() {
   const allProducts = getAllProducts();
 
