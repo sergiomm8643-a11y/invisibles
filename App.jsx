@@ -329,7 +329,6 @@ function LegalPage({ page, onBack }) {
     </main>
   );
 }
-```jsx
 function PrivacyPage({ onBack }) {
   return (
     <main className="legal-page">
@@ -426,8 +425,8 @@ function PrivacyPage({ onBack }) {
     </main>
   );
 }
-```
-
+```jsx
+}
 export default function App() {
   const allProducts = getAllProducts();
 
@@ -787,7 +786,9 @@ if (currentPage === "privacy") {
    <button className="footer-link" onClick={() => setCurrentPage("legal")}>
   Aviso legal
 </button>
-    <a href="#legal">Privacidad</a>
+    <button className="footer-link" onClick={() => setCurrentPage("privacy")}>
+  Privacidad
+</button>
     <a href="#legal">Cookies</a>
     <a href="#legal">Envíos</a>
   </nav>
