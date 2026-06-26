@@ -940,11 +940,7 @@ if (currentPage === "returns") {
         <p>LOS INVISIBLES nace para representar a todos aquellos sectores que sostienen el mundo cada día sin recibir el respeto que merecen. Albañiles, fontaneros, enfermeras, mecánicos, electricistas, hostelería y todos aquellos trabajadores que hacen posible nuestra vida cotidiana.</p>
       </section>
 
-      <section id="legal" className="legal">
-        <article><h3>Aviso legal</h3><p>Titular de la web, datos fiscales, dirección de contacto y correo electrónico deberán añadirse antes del lanzamiento definitivo.</p></article>
-        <article><h3>Privacidad y cookies</h3><p>Usamos cookies técnicas y analíticas para mejorar la experiencia de compra. El usuario podrá aceptar, rechazar o configurar las cookies.</p></article>
-        <article><h3>Envíos y devoluciones</h3><p>Envíos a España. Cambios y devoluciones según condiciones de compra publicadas. Añadir plazos reales antes de vender.</p></article>
-      </section>
+      
       <section id="contacto" className="contact-section">
   <p className="eyebrow">Contacto</p>
   <h2>¿NECESITAS AYUDA?</h2>
