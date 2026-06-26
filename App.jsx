@@ -425,7 +425,65 @@ function PrivacyPage({ onBack }) {
     </main>
   );
 }
+function CookiesPage({ onBack }) {
+  return (
+    <main className="legal-page">
+      <section className="legal-hero">
+        <p className="eyebrow">LOS INVISIBLES</p>
+        <h1>POLÍTICA DE COOKIES</h1>
+      </section>
 
+      <section className="legal-content">
+
+        <h2>1. ¿Qué son las cookies?</h2>
+
+        <p>
+          Las cookies son pequeños archivos que se almacenan en tu dispositivo
+          cuando visitas una página web. Su finalidad es mejorar la experiencia
+          de navegación y permitir el correcto funcionamiento del sitio.
+        </p>
+
+        <h2>2. Tipos de cookies utilizadas</h2>
+
+        <p>En este sitio web pueden utilizarse las siguientes categorías:</p>
+
+        <ul>
+          <li>Cookies técnicas: necesarias para el funcionamiento de la tienda.</li>
+          <li>Cookies de preferencias: recuerdan determinadas configuraciones del usuario.</li>
+          <li>Cookies analíticas: permiten conocer el uso de la web para mejorar nuestros servicios.</li>
+        </ul>
+
+        <h2>3. Gestión de cookies</h2>
+
+        <p>
+          El usuario puede aceptar o rechazar el uso de cookies mediante el
+          banner mostrado al acceder al sitio web. Asimismo, puede eliminar o
+          bloquear las cookies desde la configuración de su navegador.
+        </p>
+
+        <h2>4. Cookies de terceros</h2>
+
+        <p>
+          Determinados servicios utilizados por la tienda, como la plataforma
+          de comercio electrónico Shopify u otras herramientas técnicas,
+          pueden instalar cookies propias necesarias para prestar el servicio.
+        </p>
+
+        <h2>5. Actualizaciones</h2>
+
+        <p>
+          Esta Política de Cookies podrá modificarse cuando sea necesario para
+          adaptarse a cambios legales o técnicos.
+        </p>
+
+        <button className="btn btn-primary" onClick={onBack}>
+          VOLVER A LA TIENDA
+        </button>
+
+      </section>
+    </main>
+  );
+}
 export default function App() {
   const allProducts = getAllProducts();
 
@@ -535,6 +593,9 @@ if (currentPage === "legal") {
 if (currentPage === "privacy") {
   return <PrivacyPage onBack={() => setCurrentPage("home")} />;
 }
+ if (currentPage === "cookies") {
+  return <CookiesPage onBack={() => setCurrentPage("home")} />;
+} 
   return (
     <main className="site">
       <section className="hero">
@@ -788,7 +849,12 @@ if (currentPage === "privacy") {
     <button className="footer-link" onClick={() => setCurrentPage("privacy")}>
   Privacidad
 </button>
-    <a href="#legal">Cookies</a>
+    <button
+  className="footer-link"
+  onClick={() => setCurrentPage("cookies")}
+>
+  Cookies
+</button>
     <a href="#legal">Envíos</a>
   </nav>
 </footer>
