@@ -484,6 +484,139 @@ function CookiesPage({ onBack }) {
     </main>
   );
 }
+function ShippingPage({ onBack }) {
+  return (
+    <main className="legal-page">
+      <section className="legal-hero">
+        <p className="eyebrow">LOS INVISIBLES</p>
+        <h1>ENVÍOS</h1>
+      </section>
+
+      <section className="legal-content">
+        <h2>1. Producción bajo pedido</h2>
+
+        <p>
+          Todos los productos de LOS INVISIBLES se fabrican bajo pedido. Esto
+          significa que cada prenda entra en producción una vez confirmada la
+          compra.
+        </p>
+
+        <h2>2. Plazos estimados</h2>
+
+        <p>
+          El plazo estimado total, incluyendo producción y envío, es de
+          aproximadamente 3 a 7 días laborables, salvo incidencias externas o
+          periodos de alta demanda.
+        </p>
+
+        <h2>3. Zona de envío</h2>
+
+        <p>
+          Actualmente realizamos envíos dentro de España. Si en el futuro se
+          habilitan envíos internacionales, se indicará claramente durante el
+          proceso de compra.
+        </p>
+
+        <h2>4. Costes de envío</h2>
+
+        <p>
+          Los costes de envío se mostrarán durante el proceso de compra antes
+          de finalizar el pedido.
+        </p>
+
+        <h2>5. Incidencias en el envío</h2>
+
+        <p>
+          Si detectas cualquier incidencia con tu pedido, puedes escribirnos a
+          losinvisiblesbrand@gmail.com indicando tu número de pedido.
+        </p>
+
+        <button className="btn btn-primary" onClick={onBack}>
+          VOLVER A LA TIENDA
+        </button>
+      </section>
+    </main>
+  );
+}
+function ReturnsPage({ onBack }) {
+  return (
+    <main className="legal-page">
+      <section className="legal-hero">
+        <p className="eyebrow">LOS INVISIBLES</p>
+        <h1>CAMBIOS Y DEVOLUCIONES</h1>
+      </section>
+
+      <section className="legal-content">
+        <h2>1. Producción bajo pedido</h2>
+
+        <p>
+          Todos nuestros productos se fabrican bajo pedido una vez realizada la
+          compra. Por este motivo, no trabajamos con stock previo ni producimos
+          prendas en masa.
+        </p>
+
+        <h2>2. Cambios aceptados</h2>
+
+        <p>
+          Aceptamos cambios en los siguientes casos:
+        </p>
+
+        <ul>
+          <li>Cambio de talla.</li>
+          <li>Color recibido incorrecto respecto al pedido realizado.</li>
+          <li>Producto defectuoso o error de fabricación.</li>
+        </ul>
+
+        <h2>3. Condiciones del cambio</h2>
+
+        <p>
+          Para solicitar un cambio, la prenda debe encontrarse sin usar, sin
+          lavar, en buen estado y con su embalaje original siempre que sea
+          posible.
+        </p>
+
+        <h2>4. Plazo para solicitar un cambio</h2>
+
+        <p>
+          El cliente deberá contactar con nosotros en un plazo máximo de 14 días
+          naturales desde la recepción del pedido.
+        </p>
+
+        <h2>5. Cómo solicitar un cambio</h2>
+
+        <p>
+          Para gestionar un cambio, escríbenos a losinvisiblesbrand@gmail.com
+          indicando:
+        </p>
+
+        <ul>
+          <li>Número de pedido.</li>
+          <li>Nombre y apellidos.</li>
+          <li>Motivo del cambio.</li>
+          <li>Fotografías del producto si existe defecto o error.</li>
+        </ul>
+
+        <h2>6. Devoluciones</h2>
+
+        <p>
+          Al tratarse de productos fabricados bajo pedido, no se aceptan
+          devoluciones por cambio de opinión una vez el pedido ha entrado en
+          producción.
+        </p>
+
+        <p>
+          Esta política no afecta a los derechos legales que correspondan al
+          consumidor en caso de producto defectuoso, error en el pedido o falta
+          de conformidad.
+        </p>
+
+        <button className="btn btn-primary" onClick={onBack}>
+          VOLVER A LA TIENDA
+        </button>
+      </section>
+    </main>
+  );
+}
 export default function App() {
   const allProducts = getAllProducts();
 
@@ -595,6 +728,13 @@ if (currentPage === "privacy") {
 }
  if (currentPage === "cookies") {
   return <CookiesPage onBack={() => setCurrentPage("home")} />;
+} 
+ if (currentPage === "shipping") {
+  return <ShippingPage onBack={() => setCurrentPage("home")} />;
+}
+
+if (currentPage === "returns") {
+  return <ReturnsPage onBack={() => setCurrentPage("home")} />;
 } 
   return (
     <main className="site">
@@ -855,7 +995,13 @@ if (currentPage === "privacy") {
 >
   Cookies
 </button>
-    <a href="#legal">Envíos</a>
+    <button className="footer-link" onClick={() => setCurrentPage("shipping")}>
+  Envíos
+</button>
+
+<button className="footer-link" onClick={() => setCurrentPage("returns")}>
+  Cambios y devoluciones
+</button>
   </nav>
 </footer>
 
