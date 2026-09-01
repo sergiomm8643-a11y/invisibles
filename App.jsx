@@ -670,6 +670,22 @@ const bestSellers = bestSellerSlugs
 const newArrivals = newArrivalSlugs
   .map((slug) => allProducts.find((product) => product.slug === slug))
   .filter(Boolean);
+  const openProduct = (item) => {
+  setSelectedProductSlug(item.slug);
+  setSelectedGender(item.gender);
+  setSelectedColor(item.colors[0].name);
+  setSelectedSize(item.sizes[0]);
+  setSelectedImageIndex(0);
+
+  setTimeout(() => {
+    document
+      .getElementById("comprar")
+      ?.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+  }, 100);
+};
   const changeGender = (gender) => {
   const availableProducts = collections
     .flatMap((collection) => collection.products)
