@@ -648,6 +648,28 @@ const visibleCollections = collections
     ),
   }))
   .filter((collection) => collection.products.length > 0);
+  const bestSellerSlugs = [
+  "camiseta-especial",
+  "albaniles",
+  "arquitectos",
+  "camiseta-especial-mujer",
+  "arquitectas",
+];
+
+const newArrivalSlugs = [
+  "arquitectos",
+  "arquitectas",
+  "camiseta-especial-mujer",
+  "camiseta-especial",
+];
+
+const bestSellers = bestSellerSlugs
+  .map((slug) => allProducts.find((product) => product.slug === slug))
+  .filter(Boolean);
+
+const newArrivals = newArrivalSlugs
+  .map((slug) => allProducts.find((product) => product.slug === slug))
+  .filter(Boolean);
   const changeGender = (gender) => {
   const availableProducts = collections
     .flatMap((collection) => collection.products)
