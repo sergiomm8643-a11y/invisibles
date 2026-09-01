@@ -738,33 +738,83 @@ if (currentPage === "returns") {
 } 
   return (
     <main className="site">
-      <section className="hero">
+     <header className="main-header">
+  <div className="brand-logo">
+    LOS<br />INVISIBLES
+  </div>
+
+  <nav className="main-nav">
+    <a href="#inicio">INICIO</a>
+    <a href="#colecciones">COLECCIONES</a>
+
+    <button
+      onClick={() => {
+        changeGender("hombre");
+        setTimeout(() => {
+          document.getElementById("productos")?.scrollIntoView({
+            behavior: "smooth",
+          });
+        }, 100);
+      }}
+    >
+      HOMBRE
+    </button>
+
+    <button
+      onClick={() => {
+        changeGender("mujer");
+        setTimeout(() => {
+          document.getElementById("productos")?.scrollIntoView({
+            behavior: "smooth",
+          });
+        }, 100);
+      }}
+    >
+      MUJER
+    </button>
+
+    <a href="#historia">SOBRE NOSOTROS</a>
+  </nav>
+
+  <div className="header-icons">
+    <span>⌕</span>
+    <span>♡</span>
+    <span>🛒</span>
+  </div>
+</header>
+
+<section id="inicio" className="hero-v2">
   <img
     src="/hero-banner.png.png"
-    alt="LOS INVISIBLES — Camiseta Albañiles"
-    className="hero-banner"
+    alt="LOS INVISIBLES"
+    className="hero-v2-image"
   />
 
-  <div className="hero-overlay" />
+  <div className="hero-v2-content">
+    <p className="hero-kicker">NO QUEREMOS APLAUSOS.</p>
 
-  <div className="hero-content">
-    <p className="eyebrow">Movimiento Oficial</p>
-    <h1>LOS INVISIBLES</h1>
-    <p className="hero-claim">
-      NO QUEREMOS APLAUSOS.<br />
-      <span>EXIGIMOS RESPETO.</span>
+    <h1>
+      EXIGIMOS<br />
+      RESPETO.
+    </h1>
+
+    <p className="hero-description">
+      Camisetas para quienes construyen,<br />
+      crean y sostienen el mundo.
     </p>
 
-    <div className="hero-actions">
-      <a href="#colecciones" className="btn btn-primary">SELECCIONA TU CAMISETA</a>
-      <a href="#historia" className="btn btn-secondary">NUESTRA HISTORIA</a>
+    <div className="hero-v2-actions">
+      <a href="#productos" className="btn-v2-primary">
+        VER CAMISETAS
+      </a>
+
+      <a href="#historia" className="btn-v2-link">
+        SOBRE NOSOTROS →
+      </a>
     </div>
   </div>
 </section>
-      <section className="message">
-        <h2>TODOS SOMOS INVISIBLES PARA ALGUIEN.</h2>
-        <p>Pero sin nosotros, nada funciona.</p>
-      </section>
+      
 <section id="colecciones" className="collections-section">
   <p className="eyebrow">Colecciones</p>
   <div className="gender-tabs">
