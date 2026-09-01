@@ -723,3 +723,215 @@ p {
 .footer button {
   color: #fff;
 }
+/* =====================================================
+   LOS INVISIBLES V2 — HEADER
+===================================================== */
+
+.main-header {
+  height: 74px;
+  padding: 0 4vw;
+  display: grid;
+  grid-template-columns: 180px 1fr 180px;
+  align-items: center;
+  background: #f7f5f0;
+  color: #111;
+  position: relative;
+  z-index: 100;
+}
+
+.brand-logo {
+  font-size: 1.25rem;
+  line-height: 0.85;
+  font-weight: 950;
+  letter-spacing: -0.06em;
+}
+
+.main-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+}
+
+.main-nav a,
+.main-nav button {
+  background: none;
+  border: 0;
+  color: #111;
+  font: inherit;
+  font-size: 0.72rem;
+  font-weight: 800;
+  cursor: pointer;
+  text-decoration: none;
+  padding: 7px 0;
+}
+
+.main-nav a:hover,
+.main-nav button:hover {
+  opacity: 0.55;
+}
+
+.header-icons {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 18px;
+  font-size: 1.25rem;
+}
+
+
+/* =====================================================
+   HERO V2
+===================================================== */
+
+.hero-v2 {
+  position: relative;
+  max-width: 100%;
+  height: min(620px, 68vh);
+  min-height: 470px;
+  overflow: hidden;
+  background: #ebe7df;
+}
+
+.hero-v2-image {
+  position: absolute;
+  inset: 0 0 0 auto;
+  width: 65%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.hero-v2::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    #f7f5f0 0%,
+    #f7f5f0 29%,
+    rgba(247, 245, 240, 0.92) 38%,
+    rgba(247, 245, 240, 0.12) 63%,
+    transparent 76%
+  );
+}
+
+.hero-v2-content {
+  position: relative;
+  z-index: 2;
+  width: 44%;
+  height: 100%;
+  padding-left: 7vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  color: #111;
+}
+
+.hero-kicker {
+  margin: 0 0 13px;
+  font-size: 0.78rem;
+  font-weight: 850;
+}
+
+.hero-v2 h1 {
+  margin: 0;
+  font-size: clamp(3.4rem, 6vw, 6.4rem);
+  line-height: 0.86;
+  letter-spacing: -0.055em;
+  font-weight: 950;
+  color: #111;
+}
+
+.hero-description {
+  margin: 25px 0;
+  color: #333;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.hero-v2-actions {
+  display: flex;
+  align-items: center;
+  gap: 27px;
+}
+
+.btn-v2-primary {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 48px;
+  padding: 0 27px;
+  background: #111;
+  color: white;
+  text-decoration: none;
+  font-size: 0.75rem;
+  font-weight: 850;
+}
+
+.btn-v2-link {
+  color: #111;
+  text-decoration: none;
+  font-size: 0.75rem;
+  font-weight: 850;
+}
+
+
+/* =====================================================
+   RESPONSIVE HEADER / HERO
+===================================================== */
+
+@media (max-width: 800px) {
+
+  .main-header {
+    grid-template-columns: 1fr auto;
+    height: 64px;
+    padding: 0 20px;
+  }
+
+  .main-nav {
+    display: none;
+  }
+
+  .header-icons span:first-child,
+  .header-icons span:nth-child(2) {
+    display: none;
+  }
+
+  .hero-v2 {
+    height: 650px;
+  }
+
+  .hero-v2-image {
+    width: 100%;
+    height: 58%;
+    top: auto;
+    bottom: 0;
+  }
+
+  .hero-v2::after {
+    background: linear-gradient(
+      180deg,
+      #f7f5f0 0%,
+      #f7f5f0 39%,
+      rgba(247,245,240,.94) 47%,
+      rgba(247,245,240,0) 72%
+    );
+  }
+
+  .hero-v2-content {
+    width: auto;
+    height: auto;
+    padding: 48px 22px 0;
+    justify-content: flex-start;
+  }
+
+  .hero-v2 h1 {
+    font-size: clamp(3rem, 15vw, 4.6rem);
+  }
+
+  .hero-description {
+    margin: 18px 0;
+  }
+}
