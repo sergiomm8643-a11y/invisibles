@@ -916,65 +916,130 @@ if (currentPage === "returns") {
   </div>
 
 </section>     
-<section id="colecciones" className="collections-section">
-  <p className="eyebrow">Colecciones</p>
-  <div className="gender-tabs">
-  <button
-  className={selectedGender === "hombre" ? "active" : ""}
-  onClick={() => changeGender("hombre")}
->
-  HOMBRE
-</button>
+<section id="colecciones" className="collections-v2">
 
-  <button
-  className={selectedGender === "mujer" ? "active" : ""}
-  onClick={() => changeGender("mujer")}
->
-  MUJER
-</button>
-</div>
-  <h2>ELIGE TU CAMISETA</h2>
+  <div className="gender-feature-grid">
 
-  {visibleCollections.map((collection) => (
-    <div key={collection.title} className="collection-block">
-      <div className="collection-header">
-        <h3>{collection.title}</h3>
-        <p>{collection.description}</p>
+    <button
+      className="gender-feature-card"
+      onClick={() => {
+        changeGender("hombre");
+        setTimeout(() => {
+          document.getElementById("colecciones-listado")?.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+          });
+        }, 100);
+      }}
+    >
+      <div className="gender-feature-image">
+        <img
+          src="/camiseta-especial-hanger.jpg.PNG.2.png"
+          alt="Colección Hombre"
+        />
       </div>
 
-      <div className="product-cards">
-        {collection.products.map((item) => (
-          <button
-            key={item.slug}
-            onClick={() => {
-  setSelectedProductSlug(item.slug);
-  setSelectedColor(item.colors[0].name);
-  setSelectedSize(item.sizes[0]);
-  setSelectedImageIndex(0);
+      <div className="gender-feature-info">
+        <span>COLECCIÓN</span>
+        <h2>HOMBRE</h2>
+        <p>Ver camisetas →</p>
+      </div>
+    </button>
 
-  setTimeout(() => {
-    document
-      .getElementById("comprar")
-      ?.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
-  }, 100);
-}}
-            className={
-              selectedProduct.slug === item.slug
-                ? "product-card active"
-                : "product-card"
-            }
-          >
-            <img src={item.colors[0].images[0]} alt={item.title} />
-            <span>{item.title}</span>
-            <small>{item.subtitle}</small>
-          </button>
-        ))}
+
+    <button
+      className="gender-feature-card"
+      onClick={() => {
+        changeGender("mujer");
+        setTimeout(() => {
+          document.getElementById("colecciones-listado")?.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+          });
+        }, 100);
+      }}
+    >
+      <div className="gender-feature-image">
+        <img
+          src="/camiseta-especial-delante-mujer-blanca.png"
+          alt="Colección Mujer"
+        />
+      </div>
+
+      <div className="gender-feature-info">
+        <span>COLECCIÓN</span>
+        <h2>MUJER</h2>
+        <p>Ver camisetas →</p>
+      </div>
+    </button>
+
+  </div>
+
+
+  <div id="colecciones-listado" className="collection-browser">
+
+    <div className="collection-browser-header">
+      <div>
+        <span className="collection-kicker">
+          {selectedGender === "hombre" ? "HOMBRE" : "MUJER"}
+        </span>
+
+        <h2>COLECCIONES</h2>
+      </div>
+
+      <div className="gender-switch-mini">
+        <button
+          className={selectedGender === "hombre" ? "active" : ""}
+          onClick={() => changeGender("hombre")}
+        >
+          HOMBRE
+        </button>
+
+        <button
+          className={selectedGender === "mujer" ? "active" : ""}
+          onClick={() => changeGender("mujer")}
+        >
+          MUJER
+        </button>
       </div>
     </div>
-  ))}
+
+
+    <div className="collection-v2-row">
+      {visibleCollections.map((collection) => {
+
+        const firstProduct = collection.products[0];
+
+        return (
+          <div
+            key={collection.title}
+            className="collection-v2-card"
+          >
+            <div className="collection-v2-image">
+              <img
+                src={firstProduct.colors[0].images[0]}
+                alt={collection.title}
+              />
+            </div>
+
+            <div className="collection-v2-info">
+              <h3>{collection.title}</h3>
+
+              <p>{collection.description}</p>
+
+              <button
+                onClick={() => openProduct(firstProduct)}
+              >
+                VER COLECCIÓN →
+              </button>
+            </div>
+          </div>
+        );
+      })}
+    </div>
+
+  </div>
+
 </section>
       <section id="comprar" className="product-section">
         <div className="product-grid">
