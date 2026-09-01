@@ -852,7 +852,70 @@ if (currentPage === "returns") {
     </div>
   </div>
 </section>
-      
+ <section id="productos" className="shop-showcase">
+
+  <div className="product-row-section">
+    <div className="product-row-header">
+      <h2>LOS MÁS VENDIDOS</h2>
+      <span>LOS FAVORITOS DE LA COMUNIDAD</span>
+    </div>
+
+    <div className="home-product-row">
+      {bestSellers.map((item) => (
+        <button
+          key={item.slug}
+          className="home-product-card"
+          onClick={() => openProduct(item)}
+        >
+          <div className="home-product-image">
+            <img
+              src={item.colors[0].images[0]}
+              alt={item.title}
+            />
+          </div>
+
+          <div className="home-product-meta">
+            <small>{item.eyebrow}</small>
+            <h3>{item.title}</h3>
+            <strong>{item.price}</strong>
+          </div>
+        </button>
+      ))}
+    </div>
+  </div>
+
+
+  <div className="product-row-section">
+    <div className="product-row-header">
+      <h2>NOVEDADES</h2>
+      <span>ÚLTIMOS DISEÑOS</span>
+    </div>
+
+    <div className="home-product-row">
+      {newArrivals.map((item) => (
+        <button
+          key={item.slug}
+          className="home-product-card"
+          onClick={() => openProduct(item)}
+        >
+          <div className="home-product-image">
+            <img
+              src={item.colors[0].images[1] || item.colors[0].images[0]}
+              alt={item.title}
+            />
+          </div>
+
+          <div className="home-product-meta">
+            <small>{item.eyebrow}</small>
+            <h3>{item.title}</h3>
+            <strong>{item.price}</strong>
+          </div>
+        </button>
+      ))}
+    </div>
+  </div>
+
+</section>     
 <section id="colecciones" className="collections-section">
   <p className="eyebrow">Colecciones</p>
   <div className="gender-tabs">
