@@ -676,15 +676,8 @@ const newArrivals = newArrivalSlugs
   setSelectedColor(item.colors[0].name);
   setSelectedSize(item.sizes[0]);
   setSelectedImageIndex(0);
-
-  setTimeout(() => {
-    document
-      .getElementById("comprar")
-      ?.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
-  }, 100);
+  setCurrentPage("product");
+  window.scrollTo({ top: 0, behavior: "smooth" });
 };
   const changeGender = (gender) => {
   const availableProducts = collections
@@ -774,6 +767,214 @@ if (currentPage === "privacy") {
 if (currentPage === "returns") {
   return <ReturnsPage onBack={() => setCurrentPage("home")} />;
 } 
+  if (currentPage === "product") {
+  return (
+    <main className="product-page-v2">
+
+      <header className="main-header">
+        <button
+          className="brand-logo brand-logo-button"
+          onClick={() => setCurrentPage("home")}
+        >
+          LOS<br />INVISIBLES
+        </button>
+
+        <nav className="main-nav">
+          <button onClick={() => setCurrentPage("home")}>INICIO</button>
+          <button onClick={() => setCurrentPage("home")}>COLECCIONES</button>
+        </nav>
+
+        <div className="header-icons">
+          <span>♡</span>
+          <span>🛒</span>
+        </div>
+      </header>
+
+      <section className="product-detail-v2">
+
+        <div className="product-detail-gallery">
+
+          <div className="product-main-image-v2">
+            <img
+              src={selectedImage}
+              alt={`${selectedProduct.title} ${selectedColor}`}
+            />
+
+            <button
+              className="product-arrow product-arrow-left"
+              onClick={() =>
+                setSelectedImageIndex((prev) =>
+                  prev === 0
+                    ? selectedColorData.images.length - 1
+                    : prev - 1
+                )
+              }
+            >
+              ‹
+            </button>
+
+            <button
+              className="product-arrow product-arrow-right"
+              onClick={() =>
+                setSelectedImageIndex((prev) =>
+                  prev === selectedColorData.images.length - 1
+                    ? 0
+                    : prev + 1
+                )
+              }
+            >
+              ›
+            </button>
+          </div>
+
+          <div className="product-thumbs-v2">
+            {selectedColorData.images.map((image, index) => (
+              <button
+                key={image}
+                className={
+                  selectedImageIndex === index
+                    ? "product-thumb-v2 active"
+                    : "product-thumb-v2"
+                }
+                onClick={() => setSelectedImageIndex(index)}
+              >
+                <img src={image} alt="" />
+              </button>
+            ))}
+          </div>
+
+        </div>
+
+
+        <div className="product-detail-info">
+
+          <button
+            className="back-to-shop"
+            onClick={() => setCurrentPage("home")}
+          >
+            ← VOLVER
+          </button>
+
+          <p className="product-detail-eyebrow">
+            {selectedProduct.eyebrow}
+          </p>
+
+          <h1>{selectedProduct.title}</h1>
+
+          <p className="product-detail-subtitle">
+            {selectedProduct.subtitle}
+          </p>
+
+          <div className="product-detail-price">
+            <span>{selectedProduct.oldPrice}</span>
+            <strong>{selectedProduct.price}</strong>
+          </div>
+
+          <div className="product-divider" />
+
+          <div className="product-option">
+            <div className="product-option-title">
+              <span>COLOR</span>
+              <strong>{selectedColor}</strong>
+            </div>
+
+            <div className="product-color-options">
+              {selectedProduct.colors.map((color) => (
+                <button
+                  key={color.name}
+                  className={
+                    selectedColor === color.name
+                      ? "product-color-chip active"
+                      : "product-color-chip"
+                  }
+                  onClick={() => {
+                    setSelectedColor(color.name);
+                    setSelectedImageIndex(0);
+                  }}
+                >
+                  <img src={color.images[0]} alt={color.name} />
+                  <span>{color.name}</span>
+                </button>
+              ))}
+            </div>
+          </div>
+
+          <div className="product-option">
+            <div className="product-option-title">
+              <span>TALLA</span>
+              <button>GUÍA DE TALLAS</button>
+            </div>
+
+            <div className="product-size-options">
+              {selectedProduct.sizes.map((size) => (
+                <button
+                  key={size}
+                  className={
+                    selectedSize === size
+                      ? "product-size-chip active"
+                      : "product-size-chip"
+                  }
+                  onClick={() => setSelectedSize(size)}
+                >
+                  {size}
+                </button>
+              ))}
+            </div>
+          </div>
+
+          <button
+            onClick={addToCart}
+            className="product-add-button"
+          >
+            AÑADIR AL CARRITO · {selectedProduct.price}
+          </button>
+
+          <div className="product-trust">
+            <span>Producción bajo pedido</span>
+            <span>Envío 3–7 días</span>
+            <span>Compra segura</span>
+          </div>
+
+          {cart.length > 0 && (
+            <div className="cart-box">
+              <h3>Tu cesta</h3>
+
+              {cart.map((item) => (
+                <div key={item.variantId} className="cart-item">
+                  <span>
+                    {item.title} · {item.color} / {item.size} x {item.quantity}
+                  </span>
+
+                  <button onClick={() => removeFromCart(item.variantId)}>
+                    Eliminar
+                  </button>
+                </div>
+              ))}
+
+              <button
+                onClick={checkoutCart}
+                className="product-add-button"
+              >
+                FINALIZAR COMPRA
+              </button>
+            </div>
+          )}
+
+        </div>
+
+      </section>
+
+      <section className="product-story-v2">
+        <p>LOS INVISIBLES</p>
+        <h2>
+          NO NECESITAS SER VISTO<br />
+          PARA DEJAR HUELLA.
+        </h2>
+      </section>
+
+    </main>
+  );
+}
   return (
     <main className="site">
      <header className="main-header">
