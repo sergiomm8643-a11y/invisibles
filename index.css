@@ -935,3 +935,131 @@ p {
     margin: 18px 0;
   }
 }
+/* =====================================================
+   HOME V2 — PRODUCTOS
+===================================================== */
+
+.shop-showcase {
+  background: #f7f5f0;
+  padding: 55px 4vw 25px;
+}
+
+.product-row-section {
+  max-width: 1450px;
+  margin: 0 auto 55px;
+}
+
+.product-row-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 20px;
+}
+
+.product-row-header h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  letter-spacing: -0.03em;
+  color: #111;
+}
+
+.product-row-header span {
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: #777;
+}
+
+.home-product-row {
+  display: flex;
+  gap: 18px;
+  overflow-x: auto;
+  padding-bottom: 14px;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: thin;
+}
+
+.home-product-card {
+  flex: 0 0 210px;
+  scroll-snap-align: start;
+  border: 0;
+  padding: 0;
+  background: transparent;
+  text-align: left;
+  cursor: pointer;
+  color: #111;
+}
+
+.home-product-image {
+  width: 100%;
+  height: 265px;
+  background: #ece9e3;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.home-product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.35s ease;
+}
+
+.home-product-card:hover img {
+  transform: scale(1.025);
+}
+
+.home-product-meta {
+  padding-top: 11px;
+}
+
+.home-product-meta small {
+  display: block;
+  margin-bottom: 5px;
+  color: #777;
+  font-size: 0.6rem;
+  text-transform: uppercase;
+}
+
+.home-product-meta h3 {
+  margin: 0 0 7px;
+  font-size: 0.88rem;
+  line-height: 1.15;
+  color: #111;
+}
+
+.home-product-meta strong {
+  font-size: 0.9rem;
+  color: #111;
+}
+
+@media (min-width: 1150px) {
+  .home-product-card {
+    flex-basis: calc((100% - 90px) / 6);
+  }
+}
+
+@media (max-width: 700px) {
+  .shop-showcase {
+    padding: 38px 18px 15px;
+  }
+
+  .product-row-section {
+    margin-bottom: 42px;
+  }
+
+  .product-row-header h2 {
+    font-size: 1.25rem;
+  }
+
+  .product-row-header span {
+    display: none;
+  }
+
+  .home-product-card {
+    flex-basis: 155px;
+  }
+
+  .home-product-image {
+    height: 205px;
+  }
+}
