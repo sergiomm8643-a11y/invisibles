@@ -1074,20 +1074,20 @@ p {
 
 .gender-feature-grid {
   max-width: 1450px;
-  margin: 0 auto 70px;
+  margin: 0 auto 80px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 22px;
+  gap: 18px;
 }
 
 .gender-feature-card {
   position: relative;
   border: 0;
   padding: 0;
-  background: #ddd8cf;
+  min-height: 520px;
   overflow: hidden;
-  min-height: 420px;
   cursor: pointer;
+  background: #e9e5dd;
   text-align: left;
 }
 
@@ -1100,11 +1100,11 @@ p {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.45s ease;
+  transition: transform 0.5s ease;
 }
 
 .gender-feature-card:hover img {
-  transform: scale(1.025);
+  transform: scale(1.035);
 }
 
 .gender-feature-card::after {
@@ -1113,37 +1113,38 @@ p {
   inset: 0;
   background: linear-gradient(
     180deg,
-    transparent 35%,
-    rgba(0,0,0,.7) 100%
+    rgba(0,0,0,0) 45%,
+    rgba(0,0,0,.72) 100%
   );
 }
 
 .gender-feature-info {
   position: absolute;
   z-index: 2;
-  left: 30px;
-  bottom: 28px;
-  color: white;
+  left: 34px;
+  bottom: 32px;
+  color: #fff;
 }
 
 .gender-feature-info span {
-  font-size: .65rem;
+  font-size: .62rem;
+  letter-spacing: .15em;
   font-weight: 800;
 }
 
 .gender-feature-info h2 {
-  color: white;
   margin: 5px 0 8px;
-  font-size: 2.2rem;
+  color: #fff;
+  font-size: 2.6rem;
+  line-height: .95;
 }
 
 .gender-feature-info p {
-  color: white;
   margin: 0;
-  font-size: .8rem;
+  color: #fff;
+  font-size: .75rem;
   font-weight: 700;
 }
-
 
 /* =====================================================
    COLLECTION BROWSER
@@ -1158,7 +1159,7 @@ p {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 }
 
 .collection-kicker {
@@ -1195,56 +1196,58 @@ p {
 
 .collection-v2-row {
   display: flex;
-  gap: 18px;
+  gap: 15px;
   overflow-x: auto;
-  padding-bottom: 12px;
+  padding-bottom: 15px;
 }
 
 .collection-v2-card {
-  flex: 0 0 310px;
-  background: white;
-  border: 1px solid #dedad2;
+  flex: 0 0 285px;
+  background: transparent;
+  border: 0;
 }
 
 .collection-v2-image {
-  height: 265px;
-  background: #eeebe5;
+  height: 340px;
   overflow: hidden;
+  background: #ece9e2;
 }
 
 .collection-v2-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: transform .35s ease;
+}
+
+.collection-v2-card:hover .collection-v2-image img {
+  transform: scale(1.025);
 }
 
 .collection-v2-info {
-  padding: 18px;
+  padding: 13px 0 0;
 }
 
 .collection-v2-info h3 {
-  margin: 0 0 6px;
-  font-size: 1rem;
+  margin: 0 0 5px;
+  font-size: .95rem;
+  text-transform: uppercase;
 }
 
 .collection-v2-info p {
-  min-height: 38px;
-  margin: 0 0 16px;
-  color: #777;
-  font-size: .72rem;
-  line-height: 1.45;
+  display: none;
 }
 
 .collection-v2-info button {
-  padding: 0;
+  margin-top: 4px;
   border: 0;
+  padding: 0;
   background: transparent;
   color: #111;
-  font-size: .68rem;
-  font-weight: 850;
+  font-size: .65rem;
+  font-weight: 800;
   cursor: pointer;
 }
-
 
 /* =====================================================
    MOBILE
@@ -1259,11 +1262,11 @@ p {
   .gender-feature-grid {
     grid-template-columns: 1fr;
     gap: 14px;
-    margin-bottom: 50px;
+    margin-bottom: 55px;
   }
 
   .gender-feature-card {
-    min-height: 330px;
+    min-height: 390px;
   }
 
   .collection-browser-header {
@@ -1271,11 +1274,11 @@ p {
   }
 
   .collection-v2-card {
-    flex-basis: 235px;
+    flex-basis: 220px;
   }
 
   .collection-v2-image {
-    height: 220px;
+    height: 280px;
   }
 }
 /* =====================================================
