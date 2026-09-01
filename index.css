@@ -582,3 +582,144 @@
 .footer-link:hover {
   color: white;
 }
+/* =====================================================
+   LOS INVISIBLES V2 — BASE VISUAL
+===================================================== */
+
+:root {
+  --bg: #f7f5f0;
+  --surface: #ffffff;
+  --surface-soft: #f0ede7;
+  --text: #111111;
+  --muted: #6f6b65;
+  --border: #dedad2;
+  --black: #0d0d0d;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.site {
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+}
+
+section {
+  color: var(--text);
+}
+
+h1,
+h2,
+h3,
+p {
+  color: inherit;
+}
+
+/* texto secundario */
+
+.subtitle,
+.collection-header p,
+.product-card small,
+.product-highlights {
+  color: var(--muted);
+}
+
+/* botones principales */
+
+.btn-primary,
+.btn-buy {
+  background: var(--black);
+  color: #fff;
+  border: 1px solid var(--black);
+}
+
+.btn-primary:hover,
+.btn-buy:hover {
+  background: #2a2a2a;
+}
+
+/* tarjetas */
+
+.product-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--text);
+  box-shadow: none;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.product-card.active {
+  border-color: var(--black);
+  box-shadow: 0 0 0 1px var(--black);
+}
+
+/* secciones */
+
+.collections-section,
+.product-section,
+.message,
+.history,
+.movement,
+.contact-section {
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* ficha producto */
+
+.product-grid {
+  background: var(--surface);
+  border-radius: 20px;
+}
+
+.product-info {
+  color: var(--text);
+}
+
+.image-wrap {
+  background: var(--surface-soft);
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+/* selectores */
+
+.pill,
+.size {
+  background: #fff;
+  color: #111;
+  border: 1px solid var(--border);
+}
+
+.pill.active,
+.size.active {
+  background: #111;
+  color: #fff;
+  border-color: #111;
+}
+
+/* footer permanece oscuro */
+
+.footer {
+  background: #0d0d0d;
+  color: #fff;
+}
+
+.footer h3,
+.footer p,
+.footer a,
+.footer button {
+  color: #fff;
+}
